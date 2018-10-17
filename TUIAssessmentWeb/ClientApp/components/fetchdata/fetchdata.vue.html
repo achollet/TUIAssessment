@@ -1,24 +1,32 @@
 <template>
     <div>
-        <h1>Weather forecast</h1>
+        <h1>Flights Report</h1>
 
         <p>This component demonstrates fetching data from the server.</p>
 
-        <table v-if="forecasts.length" class="table">
+        <table v-if="flights.length" class="table">
             <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
+                    <th>Id</th>
+                    <th>Departure Airport</th>
+                    <th>Arrival Airport</th>
+                    <th>Distance (km)</th>
+                    <th>Time of flight (hh:mm)</th>
+                    <th>Volume of carbutant (L)</th>
+                    <th>Creation date</th>
+                    <th>Updating date</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in forecasts">
-                    <td>{{ item.dateFormatted }}</td>
-                    <td>{{ item.temperatureC }}</td>
-                    <td>{{ item.temperatureF }}</td>
-                    <td>{{ item.summary }}</td>
+                <tr v-for="item in flights">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.departureAirportCode }}</td>
+                    <td>{{ item.arrivalAirportCode }}</td>
+                    <td>{{ item.distance }}</td>
+                    <td>{{ item.timeOfFlight }}</td>
+                    <td>{{ item.volumeOfCarburant }}</td>
+                    <td>{{ item.creationDate }}</td>
+                    <td>{{ item.updateDate }}</td>
                 </tr>
             </tbody>
         </table>
