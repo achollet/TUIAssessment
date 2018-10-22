@@ -6,8 +6,8 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/flightcreator",
-    component: require("./components/flightcreator/flightcreator.vue.html")
+    path: "/",
+    component: require("./components/home/home.vue.html")
   },
   {
     path: "/flightsreport",
