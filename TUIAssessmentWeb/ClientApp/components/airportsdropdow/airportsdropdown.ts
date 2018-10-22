@@ -10,7 +10,7 @@ export default class AirportsDropDownComponent extends Vue {
 
   mounted() {
     fetch("api/FlightCreator/GetAirports")
-      .then(response => response.json() as Promise<Airport>)
+      .then(response => response.json() as Promise<Airport[]>)
       .then(
         data =>
           (this.airports = [
