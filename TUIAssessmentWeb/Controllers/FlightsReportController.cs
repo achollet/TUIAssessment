@@ -8,10 +8,10 @@ using TUIAssessment.Web.Models;
 namespace TUIAssessment.Web.Controllers
 {
     [Route("api/[controller]")]
-    public class SampleDataController : Controller
+    public class FlightsReportController : Controller
     {
         [HttpGet("[action]")]
-        public IEnumerable<Flight> FlightsReport()
+        public IEnumerable<Flight> GetReport()
         {
             var flights = new List<Flight>
             {

@@ -12,12 +12,11 @@ interface Flights {
   updateDate: string;
 }
 
-@Component
-export default class FetchDataComponent extends Vue {
+export default class FlightsReportComponent extends Vue {
   flights: Flights[] = [];
 
   mounted() {
-    fetch("api/SampleData/FlightsReport")
+    fetch("api/FlightsReport/GetReport")
       .then(response => response.json() as Promise<Flights[]>)
       .then(data => {
         this.flights = data;
