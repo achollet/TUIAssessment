@@ -1,0 +1,7 @@
+<template>
+    <select v-model="airports">
+        <option v-for="airport in airports" v-bind:value="airport.code">{{ airport.name }}</option>
+    </select>
+</template>
+
+<script src=>"./airportsdropdown.ts"</script>

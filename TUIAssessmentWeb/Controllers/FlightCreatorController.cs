@@ -1,23 +1,26 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TUIAssessment.Web.Models;
 
 namespace TUIAssessment.Web.Controllers
 {
-    public class HomeController : Controller
+    [Route("api/[controller]")]
+    public class FlightCreatorController : Controller
     {
-        public IActionResult Index()
+        [HttpGet("[action]")]
+        public IEnumerable<AirportViewModel> GetAirports()
         {
-            return View();
-        }
+            var airports = new List<AirportViewModel>
+            {
+                new AirportViewModel("LAX", "Los Angeles International Airport"),
+                new AirportViewModel("CDG", "Charles De Gaulles International Airport"),
+                new AirportViewModel("JFK", "John Fitzgerald Kennedy International Airport")
+            };
 
-        public IActionResult Error()
-        {
-            ViewData["RequestId"] = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
-            return View();
+            return airports;
         }
     }
 }
