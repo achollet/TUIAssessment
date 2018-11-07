@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using TUIAssessmentBuisness.Services;
 
 namespace TUIAssessmentBuisness
 {
@@ -8,6 +9,7 @@ namespace TUIAssessmentBuisness
         {
             services.AddTransient<IFlightBusiness, FlightBusiness>();
             services.AddTransient<IAirportBusiness, AirportBusiness>();
+            services.AddTransient<IFlightService, FlightService>();
             return services;
         }
     }
