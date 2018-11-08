@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIAssessment.Test", "TUIAs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIAssessment.Web", "TUIAssessmentWeb\TUIAssessment.Web.csproj", "{61B8C22A-C208-4B16-8260-45681CCCD25B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIAssessmentBuisness", "TUIAssessmentBuisness\TUIAssessmentBuisness.csproj", "{36774E89-C309-4F37-A801-6AB988FAC40E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{61B8C22A-C208-4B16-8260-45681CCCD25B}.Release|x64.Build.0 = Release|Any CPU
 		{61B8C22A-C208-4B16-8260-45681CCCD25B}.Release|x86.ActiveCfg = Release|Any CPU
 		{61B8C22A-C208-4B16-8260-45681CCCD25B}.Release|x86.Build.0 = Release|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Debug|x64.Build.0 = Debug|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Debug|x86.Build.0 = Debug|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Release|x64.ActiveCfg = Release|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Release|x64.Build.0 = Release|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Release|x86.ActiveCfg = Release|Any CPU
+		{36774E89-C309-4F37-A801-6AB988FAC40E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
