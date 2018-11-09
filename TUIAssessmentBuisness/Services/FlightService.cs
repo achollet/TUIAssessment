@@ -6,33 +6,47 @@ namespace TUIAssessmentBuisness.Services
     public class FlightService : IFlightService
     {
         private readonly double _earthRadius = 6371.0088;
+        private readonly double _keroseneVolumetricMass = 0.800;
 
         /// <summary>
-        /// 
+        /// This Method is used to calculate distance between two points at the surface of a sperical earth
         /// </summary>
         /// <param name="coordinates1"></param>
         /// <param name="coordinates2"></param>
         /// <returns>decimal</returns>
-        public double CalculateDistanceBetweenTwoPoints(CoordinatesModel coordinates1, CoordinatesModel coordinates2)
+        public double CalculateDistanceWithHaversineFormulae(CoordinatesModel coordinates1, CoordinatesModel coordinates2)
         {
-            var distance = HaversineFormula(coordinates1, coordinates2);
+            var distance = HaversineFormulae(coordinates1, coordinates2);
 
             return distance;
         }
 
         /// <summary>
-        /// 
+        /// This Method is used to calculate distance between two points at the surface of a ellipsoide earth
         /// </summary>
-        /// <param name="distance"></param>
-        /// <param name="consumption"></param>
-        /// <param name="takeOffStress"></param>
-        /// <returns></returns>
-        public double CalculateFuelVolumeForFlight(double distance, double consumption, double takeOffStress)
+        /// <param name="coordinates1"></param>
+        /// <param name="coordinates2"></param>
+        /// <returns>decimal</returns>
+        public double CalculateDistanceWithVicentyFormulae(CoordinatesModel coordinates1, CoordinatesModel coordinates2)
         {
-            throw new System.NotImplementedException();
+            var distance = VicentyFormulae(coordinates1, coordinates2);
+
+            return distance;
         }
 
-        private double HaversineFormula(CoordinatesModel coordinates1, CoordinatesModel coordinates2)
+        /// <summary>
+        /// This Method is used to calculate the mass of fuel need to make the flight;
+        /// </summary>
+        /// <param name="distance">in kilometer</param>
+        /// <param name="consumption">in cubicmeter per kilometer</param>
+        /// <param name="takeOffStress">in kg of Kerosène</param>
+        /// <returns>in Tons</returns>
+        public double CalculateFuelVolumeForFlight(double distance, double consumption, double takeOffStress)
+        {
+            return Math.Round((consumption * distance) * _keroseneVolumetricMass + takeOffStress, 2);
+        }
+
+        private double HaversineFormulae(CoordinatesModel coordinates1, CoordinatesModel coordinates2)
         {
             var deltaLambda = Math.Abs(coordinates1.Longitude.ToRadians() - coordinates2.Longitude.ToRadians());
             var deltaPhi = Math.Abs(coordinates1.Latitude.ToRadians() - coordinates2.Latitude.ToRadians());

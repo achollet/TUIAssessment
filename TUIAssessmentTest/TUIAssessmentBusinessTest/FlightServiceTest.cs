@@ -21,9 +21,20 @@ namespace TUIAssessmentTest.Business
 
             var flightService = new FlightService();
 
-            var resultingDistance = flightService.CalculateDistanceBetweenTwoPoints(coordinate1, coordinate2);
+            var resultingDistance = flightService.CalculateDistanceWithHaversineFormulae(coordinate1, coordinate2);
 
             Assert.AreEqual(distanceBetween, resultingDistance);
+        }
+
+        [DataTestMethod]
+        [DataRow(0.0, 0.0, 0.0, 0.0)]
+        public void FlightService_CalculateFuelVolume(double distance, double consumption, double takeOffStress, double expectedVolume)
+        {
+            var flightService = new FlightService();
+
+            var resultingVolume = flightService.CalculateFuelVolumeForFlight(distance, consumption, takeOffStress);
+
+            Assert.AreEqual(expectedVolume, resultingVolume);
         }
     }
 }
