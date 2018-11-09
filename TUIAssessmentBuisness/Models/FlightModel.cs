@@ -7,9 +7,9 @@ namespace TUIAssessmentBuisness.Models
         public int ID { get; set; }
         public string DepartureAirportID { get; set; }
         public string ArrivalAirportID { get; set; }
-        public decimal Distance { get; set; }
-        public decimal Carburant { get; set; }
-        public decimal Duration { get; set; }
+        public double Distance { get; set; }
+        public double Carburant { get; set; }
+        public double Duration { get; set; }
         public DateTime Creation { get; set; }
         public DateTime Update { get; set; }
     }

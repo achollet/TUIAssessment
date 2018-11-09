@@ -4,7 +4,7 @@ namespace TUIAssessmentBuisness.Services
 {
     public interface IFlightService
     {
-        decimal CalculateDistanceBetweenTwoAirports(AirportModel airport1, AirportModel airport2);
-        decimal CalculateFuelVolumeForFlight(decimal distance, decimal consumption, decimal takeOffStress);
+        double CalculateDistanceBetweenTwoPoints(CoordinatesModel coordinates1, CoordinatesModel coordinates2);
+        double CalculateFuelVolumeForFlight(double distance, double consumption, double takeOffStress);
     }
 }
