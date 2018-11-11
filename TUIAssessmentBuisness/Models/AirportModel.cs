@@ -7,5 +7,6 @@ namespace TUIAssessmentBuisness.Models
         public string Code { get; set; }
         public string Name { get; set; }
         public CoordinatesModel Coordinates { get; set; }
+        public double TakeOffEffort { get; set; }
     }
 }
