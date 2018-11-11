@@ -46,6 +46,19 @@ namespace TUIAssessmentBuisness.Services
             return Math.Round((consumption * distance) * _keroseneVolumetricMass + takeOffStress, 2);
         }
 
+        ///<summary>
+        /// calcultae time of flight in hours using a distance in km and a speed in km/h.
+        ///</summary>
+        ///<param name="distance">in kilometers</param>
+        ///<param name="speed">in kilometers per hour</param>
+        ///<returns>in hours</returns>
+        public double CalculateTimeOfFlight(double distance, double speed)
+        {
+            return Math.Round(distance / speed, 2);
+        }
+
+        #region private methods
+
         private double HaversineFormulae(CoordinatesModel coordinates1, CoordinatesModel coordinates2)
         {
             var deltaLambda = Math.Abs(coordinates1.Longitude.ToRadians() - coordinates2.Longitude.ToRadians());
@@ -68,6 +81,8 @@ namespace TUIAssessmentBuisness.Services
 
             return Math.Round(2 * _earthRadius * deltaSigma, 2);
         }
+
+        #endregion
     }
 
     /// <summary>

@@ -36,5 +36,16 @@ namespace TUIAssessmentTest.Business
 
             Assert.AreEqual(expectedVolume, resultingVolume);
         }
+
+         [DataTestMethod]
+         [DataRow(4000.0, 960.0, 4.17)]
+         public void FlightService_CalculateTimeOfFlight(double distance, double speed, double expectedTimeOfFlight)
+         {
+             var flightService = new FlightService();
+
+             var resultingTimeOfFlight = flightService.CalculateTimeOfFlight(distance, speed);
+
+             Assert.AreEqual(expectedTimeOfFlight, resultingTimeOfFlight);
+         }
     }
 }
