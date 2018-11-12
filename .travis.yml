@@ -3,4 +3,6 @@ solution: TUIAssessment.sln
 mono: none
 dotnet: 2.1
 script:
- - dotnet restore
+  - dotnet restore
+  - sudo apt-get install -y gtk-sharp2
+  - nuget restore TUIAssessment.sln
