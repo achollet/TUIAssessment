@@ -3,5 +3,9 @@ solution: TUIAssessment.sln
 mono: none
 dotnet: 2.1
 script:
+<<<<<<< HEAD
   - dotnet build ./TUIAssessmentBuisness/TUIAssessmentBuisness.csproj
+=======
+  - dotnet build ./TUIAssessmentBusiness/TUIAssessmentBusiness.csproj
+>>>>>>> Trying a new configuration for CI with build and TU
   - dotnet test ./TUIAssessmentTest/TUIAssessment.Test.csproj
