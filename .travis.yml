@@ -3,5 +3,12 @@ solution: TUIAssessment.sln
 mono: none
 dotnet: 2.1
 script:
+<<<<<<< HEAD
   - dotnet build ./TUIAssessmentBuisness/TUIAssessmentBuisness.csproj
   - dotnet test ./TUIAssessmentTest/TUIAssessment.Test.csproj
+=======
+  - npm ./TUIAssessmentWeb/
+  - dotnet restore
+  - dotnet build
+  - dotnet test
+>>>>>>> Update tracvis.yml for CI
