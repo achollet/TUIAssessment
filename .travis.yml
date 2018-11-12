@@ -3,7 +3,5 @@ solution: TUIAssessment.sln
 mono: none
 dotnet: 2.1
 script:
-  - npm install ./TUIAssessmentWeb/
-  - dotnet restore
-  - dotnet build
-  - dotnet test
+  - dotnet build ./TUIAssessmentBusiness/TUIAssessmentBusiness.csproj
+  - dotnet test ./TUIAssessmentTest/TUIAssessment.Test.csproj
