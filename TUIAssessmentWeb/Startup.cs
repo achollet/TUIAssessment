@@ -6,7 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using TUIAssessmentBuisness;
+using TUIAssessment.DAL;
 
 namespace TUIAssessment.Web
 {
@@ -23,8 +26,8 @@ namespace TUIAssessment.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //services.AddTUIAssessmentBusinessExtension();
-            //services.AddTUIAssessmentWebExtension();
+            services.AddTUIAssessmentBusinessExtension();
+            services.AddTUIAssessmentDALExtension();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
