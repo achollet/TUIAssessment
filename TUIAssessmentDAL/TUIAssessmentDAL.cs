@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TUIAssessment.DAL.Entities;
+using TUIAssessment.DAL;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System;
@@ -9,13 +10,24 @@ namespace TUIAssessment.DAL
 {
     public class TUIAssessmentDAL : ITUIAssessmentDAL
     {
+        private readonly string _connectionString = "Data Source=tuiassessment.db";
+        private DbContextOptions _options;
+
+        public TUIAssessmentDAL()
+        {
+            _options = GetDbContextOptions();
+        }
+
         #region reading methods
 
         public AirportEntity GetAirportEntityByID(int Id)
         {
+
+
+
             AirportEntity airport = null;
 
-            using (var context = new TUIAssessmentDALContext())
+            using (var context = new TUIAssessmentDALContext(_options))
             {
                 airport = context.Airports.Single(a => a.Id == Id);
             }
@@ -27,7 +39,7 @@ namespace TUIAssessment.DAL
         {
             var airports = new List<AirportEntity>();
 
-            using (var context = new TUIAssessmentDALContext())
+            using (var context = new TUIAssessmentDALContext(_options))
             {
                 airports = context.Airports.ToList();
             }
@@ -39,7 +51,7 @@ namespace TUIAssessment.DAL
         {
             FlightEntity flight = null;
 
-            using (var context = new TUIAssessmentDALContext())
+            using (var context = new TUIAssessmentDALContext(_options))
             {
                 flight = context.Flights.Single(f => f.Id == Id);
             }
@@ -51,7 +63,7 @@ namespace TUIAssessment.DAL
         {
             var flights = new List<FlightEntity>();
 
-            using (var context = new TUIAssessmentDALContext())
+            using (var context = new TUIAssessmentDALContext(_options))
             {
                 flights = context.Flights.ToList();
             }
@@ -65,7 +77,7 @@ namespace TUIAssessment.DAL
 
         public FlightEntity UpdateFlightEntity(FlightEntity flight)
         {
-            using (var context = new TUIAssessmentDALContext())
+            using (var context = new TUIAssessmentDALContext(_options))
             {
                 var flightInDB = context.Flights.Single(f => f.Id == flight.Id);
 
@@ -87,7 +99,7 @@ namespace TUIAssessment.DAL
 
         public FlightEntity SaveFlightEntity(FlightEntity flight)
         {
-            using (var context = new TUIAssessmentDALContext())
+            using (var context = new TUIAssessmentDALContext(_options))
             {
                 context.Flights.Add(flight);
                 context.SaveChanges();
@@ -99,7 +111,7 @@ namespace TUIAssessment.DAL
         public bool RemoveFlightEntityByID(int Id)
         {
             var count = 0;
-            using (var context = new TUIAssessmentDALContext())
+            using (var context = new TUIAssessmentDALContext(_options))
             {
                 var flight = context.Flights.Single(f => f.Id == Id);
                 if (flight != null)
@@ -113,5 +125,11 @@ namespace TUIAssessment.DAL
         }
 
         #endregion
+
+        private DbContextOptions GetDbContextOptions()
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<TUIAssessmentDALContext>();
+            return optionsBuilder.UseSqlite(_connectionString).Options;
+        }
     }
 }

@@ -28,6 +28,11 @@ namespace TUIAssessment.Web
             services.AddMvc();
             services.AddTUIAssessmentBusinessExtension();
             services.AddTUIAssessmentDALExtension();
+
+            //TODO : déplacer la connectionstring dans l'appsettings
+            string dbConnectionString = "Data Source=tuiassessment.db";
+
+            services.AddDbContext<TUIAssessmentDALContext>(options => options.UseSqlite(dbConnectionString, builder => builder.MigrationsAssembly(typeof(Startup).Assembly.FullName)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

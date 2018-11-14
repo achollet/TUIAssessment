@@ -8,7 +8,6 @@ namespace TUIAssessment.DAL.Entities
     public class FlightEntity
     {
         [Key]
-        [Index("FlightIndex")]
         public int Id { get; set; }
         [Required]
         public int DepartureAirportId { get; set; }
