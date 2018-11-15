@@ -5,8 +5,8 @@ namespace TUIAssessmentBuisness.Models
     public class FlightModel
     {
         public int ID { get; set; }
-        public string DepartureAirportID { get; set; }
-        public string ArrivalAirportID { get; set; }
+        public AirportModel DepartureAirport { get; set; }
+        public AirportModel ArrivalAirport { get; set; }
         public double Distance { get; set; }
         public double Carburant { get; set; }
         public double Duration { get; set; }

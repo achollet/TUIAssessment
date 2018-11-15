@@ -14,6 +14,7 @@ namespace TUIAssessmentTest.Business
         [DataRow(49.012780, 2.550000, 35.552260, 139.779690, 9706.83)]
         [DataRow(55.623564, 12.660777, -26.133480, 28.236060, 9210.66)]
         [DataRow(55.752220, 37.615560, -34.82218, -58.535843, 13502.94)]
+        [DataRow(40.6398, -73.7789, 49.012780, 2.550000, 5833.66)]
         public void FlightService_CalculateDistance(double latitude1, double longitude1, double latitude2, double longitude2, double distanceBetween)
         {
             var coordinate1 = new CoordinatesModel(latitude1, longitude1);
@@ -37,15 +38,15 @@ namespace TUIAssessmentTest.Business
             Assert.AreEqual(expectedVolume, resultingVolume);
         }
 
-         [DataTestMethod]
-         [DataRow(4000.0, 960.0, 4.17)]
-         public void FlightService_CalculateTimeOfFlight(double distance, double speed, double expectedTimeOfFlight)
-         {
-             var flightService = new FlightService();
+        [DataTestMethod]
+        [DataRow(4000.0, 960.0, 4.17)]
+        public void FlightService_CalculateTimeOfFlight(double distance, double speed, double expectedTimeOfFlight)
+        {
+            var flightService = new FlightService();
 
-             var resultingTimeOfFlight = flightService.CalculateTimeOfFlight(distance, speed);
+            var resultingTimeOfFlight = flightService.CalculateTimeOfFlight(distance, speed);
 
-             Assert.AreEqual(expectedTimeOfFlight, resultingTimeOfFlight);
-         }
+            Assert.AreEqual(expectedTimeOfFlight, resultingTimeOfFlight);
+        }
     }
 }
