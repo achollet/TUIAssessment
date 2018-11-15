@@ -5,7 +5,8 @@ namespace TUIAssessmentBuisness
     public interface IFlightBusiness
     {
         FlightModel CreateFlight(int departureAirportId, int arrivalAirportId);
-        FlightModel UpdateFlightById(int flightId);
+        FlightModel UpdateFlight(FlightModel flight);
+        bool DeleteFlightById(int flightId);
         IEnumerable<FlightModel> GetAllFlights();
     }
 }

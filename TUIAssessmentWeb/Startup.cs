@@ -6,7 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using TUIAssessmentBuisness;
+using TUIAssessment.DAL;
 
 namespace TUIAssessment.Web
 {
@@ -23,8 +26,13 @@ namespace TUIAssessment.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //services.AddTUIAssessmentBusinessExtension();
-            //services.AddTUIAssessmentWebExtension();
+            services.AddTUIAssessmentBusinessExtension();
+            services.AddTUIAssessmentDALExtension();
+
+            //TODO : déplacer la connectionstring dans l'appsettings
+            string dbConnectionString = "Data Source=tuiassessment.db";
+
+            services.AddDbContext<TUIAssessmentDALContext>(options => options.UseSqlite(dbConnectionString, builder => builder.MigrationsAssembly(typeof(Startup).Assembly.FullName)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
