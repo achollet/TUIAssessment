@@ -19,6 +19,7 @@ namespace TUIAssessmentTest.Business
         private List<AirportModel> _airportsList;
         private List<FlightModel> _expectingFlights;
         private List<FlightEntity> _flightEntities;
+        private FlightEntity _flightEntityUpdated;
         private List<AirportEntity> _airportEntities;
         private FlightBusiness _flightBusiness;
 
@@ -81,6 +82,8 @@ namespace TUIAssessmentTest.Business
                 new FlightEntity{ Id = 5, DepartureAirportId = 1, ArrivalAirportId = 4, Distance = 6666.66, FuelQuantity = 42.0, TimeOfFlight = 12.0}
             };
 
+            _flightEntityUpdated = new FlightEntity { Id = 1, DepartureAirportId = 1, ArrivalAirportId = 2, Distance = 4206.66, FuelQuantity = 42.0, TimeOfFlight = 12.0 };
+
             #region mocks setup
 
             _airportBusiness.Setup(ab => ab.GetAirportById(1)).Returns(_airportsList[0]);
@@ -96,6 +99,8 @@ namespace TUIAssessmentTest.Business
             _tUIAssessmentDAL.Setup(dal => dal.SaveFlightEntity(It.IsAny<FlightEntity>())).Returns(new FlightEntity());
             _tUIAssessmentDAL.Setup(dal => dal.GetAirportEntities()).Returns(_airportEntities);
             _tUIAssessmentDAL.Setup(dal => dal.GetFlightEntities()).Returns(_flightEntities);
+            _tUIAssessmentDAL.Setup(dal => dal.UpdateFlightEntity(It.IsAny<FlightEntity>())).Returns(_flightEntityUpdated);
+            _tUIAssessmentDAL.Setup(dal => dal.RemoveFlightEntityByID(It.IsAny<int>())).Returns(true);
 
             #endregion
 
@@ -161,6 +166,36 @@ namespace TUIAssessmentTest.Business
                 Assert.IsNotNull(resultingFlight.ArrivalAirport);
                 Assert.AreEqual(expectedFlight.ArrivalAirport.Id, resultingFlight.ArrivalAirport.Id);
             }
+        }
+
+        [TestMethod]
+        public void FlightBusiness_UpdateFlight_Test()
+        {
+            var flightToUpdate = new FlightModel
+            {
+                ID = 1,
+                DepartureAirport = _airportsList[0],
+                ArrivalAirport = _airportsList[1],
+                Distance = 4206.66,
+                Carburant = 42.0,
+                Duration = 12.0
+            };
+
+            var updatedFlightResult = _flightBusiness.UpdateFlight(flightToUpdate);
+
+            Assert.IsNotNull(updatedFlightResult);
+            Assert.AreEqual(updatedFlightResult.ID, flightToUpdate.ID);
+            Assert.AreEqual(updatedFlightResult.Distance, flightToUpdate.Distance);
+        }
+
+        [TestMethod]
+        public void FlightBusiness_RemoveFlight_Test()
+        {
+            var flightIdToRemove = 1;
+
+            var hasBeenRemoved = _flightBusiness.DeleteFlightById(flightIdToRemove);
+
+            Assert.IsTrue(hasBeenRemoved);
         }
     }
 }

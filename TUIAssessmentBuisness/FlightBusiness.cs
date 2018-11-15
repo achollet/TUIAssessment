@@ -62,16 +62,18 @@ namespace TUIAssessmentBuisness
             return flightModels;
         }
 
-
-
         public bool DeleteFlightById(int flightId)
         {
-            throw new NotImplementedException();
+            return _TUIAssessmentDAL.RemoveFlightEntityByID(flightId);
         }
 
-        public FlightModel UpdateFlightById(int flightId)
+        public FlightModel UpdateFlight(FlightModel flight)
         {
-            throw new NotImplementedException();
+            var flightEntityToUpdate = SetFlightEntity(flight);
+
+            var flightEntityUpdated = _TUIAssessmentDAL.UpdateFlightEntity(flightEntityToUpdate);
+
+            return SetFlightFromFlightEntity(flightEntityUpdated);
         }
 
         private FlightEntity SetFlightEntity(FlightModel flight)

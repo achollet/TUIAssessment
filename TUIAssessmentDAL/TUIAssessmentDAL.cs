@@ -94,7 +94,7 @@ namespace TUIAssessment.DAL
                 context.SaveChanges();
             }
 
-            return flight;
+            return GetFlightEntityByID(flight.Id);
         }
 
         public FlightEntity SaveFlightEntity(FlightEntity flight)
