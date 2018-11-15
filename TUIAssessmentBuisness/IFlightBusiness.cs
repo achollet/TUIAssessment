@@ -6,6 +6,7 @@ namespace TUIAssessmentBuisness
     {
         FlightModel CreateFlight(int departureAirportId, int arrivalAirportId);
         FlightModel UpdateFlightById(int flightId);
+        bool DeleteFlightById(int flightId);
         IEnumerable<FlightModel> GetAllFlights();
     }
 }

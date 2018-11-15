@@ -10,7 +10,7 @@ namespace TUIAssessmentBuisness.Models
         public double Distance { get; set; }
         public double Carburant { get; set; }
         public double Duration { get; set; }
-        public string Creation { get; set; }
-        public string Update { get; set; }
+        public DateTime Creation { get; set; }
+        public DateTime Update { get; set; }
     }
 }
