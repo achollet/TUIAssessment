@@ -22,9 +22,6 @@ namespace TUIAssessment.DAL
 
         public AirportEntity GetAirportEntityByID(int Id)
         {
-
-
-
             AirportEntity airport = null;
 
             using (var context = new TUIAssessmentDALContext(_options))
