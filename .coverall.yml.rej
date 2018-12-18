@@ -1,0 +1,4 @@
+diff a/.coverall.yml b/.coverall.yml	(rejected hunks)
+@@ -0,2 +0 @@
+ service_name: travis-ci
+-repo_token: luqQlmaNLBvda0ZrItDIvINHe8cc83taY
