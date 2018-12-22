@@ -1,3 +1,5 @@
+using TUIAssessmentBusiness.Interfaces;
+
 using Microsoft.Extensions.DependencyInjection;
 
 namespace TUIAssessment.DAL
@@ -6,7 +8,8 @@ namespace TUIAssessment.DAL
     {
         public static IServiceCollection AddTUIAssessmentDALExtension(this IServiceCollection services)
         {
-            services.AddTransient<ITUIAssessmentDAL, TUIAssessmentDAL>();
+            services.AddTransient<IAirportRepository, SqlLiteAirportRepository>();
+            services.AddTransient<IFlightRepository, SqlLiteFlightRepository>();
 
             return services;
         }

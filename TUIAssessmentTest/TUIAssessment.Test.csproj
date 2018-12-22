@@ -11,7 +11,7 @@
     <PackageReference Include="coverlet.msbuild" Version="2.4.0"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TUIAssessmentBuisness\TUIAssessmentBuisness.csproj"/>
+    <ProjectReference Include="..\TUIAssessmentBusiness\TUIAssessmentBusiness.csproj"/>
     <ProjectReference Include="..\TUIAssessmentDAL\TUIAssessment.DAL.csproj"/>
   </ItemGroup>
 </Project>

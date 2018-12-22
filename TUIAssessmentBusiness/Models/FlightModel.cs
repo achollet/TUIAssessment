@@ -1,6 +1,6 @@
 using System;
 
-namespace TUIAssessmentBuisness.Models
+namespace TUIAssessmentBusiness.Models
 {
     public class FlightModel
     {

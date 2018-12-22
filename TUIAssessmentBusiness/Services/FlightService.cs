@@ -1,7 +1,8 @@
 using System;
-using TUIAssessmentBuisness.Models;
+using TUIAssessmentBusiness.Models;
+using TUIAssessmentBusiness.Interfaces;
 
-namespace TUIAssessmentBuisness.Services
+namespace TUIAssessmentBusiness.Services
 {
     public class FlightService : IFlightService
     {

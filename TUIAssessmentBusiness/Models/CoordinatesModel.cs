@@ -1,4 +1,4 @@
-namespace TUIAssessmentBuisness.Models
+namespace TUIAssessmentBusiness.Models
 {
     public class CoordinatesModel
     {

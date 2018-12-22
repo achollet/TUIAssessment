@@ -1,9 +1,14 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TUIAssessment.DAL.Entities
+
 {
+    [Table("Flights")]
     public class FlightEntity
     {
+        [Key]
         public int Id { get; set; }
         public int DepartureAirportId { get; set; }
         public int ArrivalAirportId { get; set; }

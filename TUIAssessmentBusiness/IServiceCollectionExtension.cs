@@ -1,7 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
-using TUIAssessmentBuisness.Services;
+using TUIAssessmentBusiness.Services;
+using TUIAssessmentBusiness.Interfaces;
 
-namespace TUIAssessmentBuisness
+namespace TUIAssessmentBusiness
 {
     public static class IServiceCollectionExtension
     {

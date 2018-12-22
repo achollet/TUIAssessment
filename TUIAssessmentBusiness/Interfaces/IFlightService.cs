@@ -1,6 +1,6 @@
-using TUIAssessmentBuisness.Models;
+using TUIAssessmentBusiness.Models;
 
-namespace TUIAssessmentBuisness.Services
+namespace TUIAssessmentBusiness.Interfaces
 {
     public interface IFlightService
     {

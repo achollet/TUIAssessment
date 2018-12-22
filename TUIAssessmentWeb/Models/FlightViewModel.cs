@@ -2,7 +2,7 @@ using System;
 
 namespace TUIAssessment.Web.Models
 {
-    public class Flight
+    public class FlightViewModel
     {
         public int Id { get; set; }
         public string DepartureAirportCode { get; set; }

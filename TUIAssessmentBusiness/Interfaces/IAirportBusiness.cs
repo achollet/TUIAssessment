@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using TUIAssessmentBuisness.Models;
-namespace TUIAssessmentBuisness
+using TUIAssessmentBusiness.Models;
+
+namespace TUIAssessmentBusiness.Interfaces
 {
     public interface IAirportBusiness
     {

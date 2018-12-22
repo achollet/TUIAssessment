@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIAssessment.Test", "TUIAs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIAssessment.Web", "TUIAssessmentWeb\TUIAssessment.Web.csproj", "{61B8C22A-C208-4B16-8260-45681CCCD25B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIAssessmentBuisness", "TUIAssessmentBuisness\TUIAssessmentBuisness.csproj", "{36774E89-C309-4F37-A801-6AB988FAC40E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIAssessmentBuisness", "TUIAssessmentBusiness\TUIAssessmentBusiness.csproj", "{36774E89-C309-4F37-A801-6AB988FAC40E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIAssessment.DAL", "TUIAssessmentDAL\TUIAssessment.DAL.csproj", "{8E90F483-142A-4970-B45C-125D32BABA18}"
 EndProject
