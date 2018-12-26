@@ -1,5 +1,4 @@
 using TUIAssessmentBusiness.Interfaces;
-
 using Microsoft.Extensions.DependencyInjection;
 
 namespace TUIAssessment.DAL
@@ -10,6 +9,8 @@ namespace TUIAssessment.DAL
         {
             services.AddTransient<IAirportRepository, SqlLiteAirportRepository>();
             services.AddTransient<IFlightRepository, SqlLiteFlightRepository>();
+            services.AddTransient<ITUIAssessmentDAL, TUIAssessmentDAL>();
+            services.AddTransient<IEntityToModelMapperService, EntityToModelMapperService>();
 
             return services;
         }

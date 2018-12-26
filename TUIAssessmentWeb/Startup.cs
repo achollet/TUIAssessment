@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using TUIAssessmentBusiness;
 using TUIAssessment.DAL;
+using TUIAssessmentBusiness;
 
 namespace TUIAssessment.Web
 {

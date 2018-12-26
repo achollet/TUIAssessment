@@ -8,7 +8,7 @@ namespace TUIAssessmentBusiness.Interfaces
         FlightModel GetFlightByID(int Id);
         IEnumerable<FlightModel> GetFlights();
         FlightModel UpdateFlight(FlightModel flight);
-        FlightModel SaveFlight(FlightModel flight);
+        bool SaveFlight(FlightModel flight);
         bool RemoveFlightByID(int Id);
     }
 }

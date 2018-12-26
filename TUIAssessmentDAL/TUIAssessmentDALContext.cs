@@ -8,9 +8,7 @@ namespace TUIAssessment.DAL
         public DbSet<AirportEntity> Airports { get; set; }
         public DbSet<FlightEntity> Flights { get; set; }
 
-        public TUIAssessmentDALContext(DbContextOptions options) : base(options) { }
-
-
+        public TUIAssessmentDALContext(DbContextOptions<TUIAssessmentDALContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AirportEntity>().HasIndex(a => a.Id).HasName("IDX_Airport_Id");

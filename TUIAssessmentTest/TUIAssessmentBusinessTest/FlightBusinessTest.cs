@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TUIAssessmentBusiness;
 using TUIAssessmentBusiness.Services;
 using TUIAssessmentBusiness.Interfaces;
 using TUIAssessmentBusiness.Models;
@@ -8,6 +7,7 @@ using TUIAssessment.DAL.Entities;
 using TUIAssessment.DAL;
 using Moq;
 using System.Linq;
+using TUIAssessmentBusiness;
 
 namespace TUIAssessmentTest.Business
 {
@@ -16,7 +16,7 @@ namespace TUIAssessmentTest.Business
     {
         private Mock<IAirportBusiness> _airportBusiness;
         private Mock<IFlightService> _flightService;
-        private Mock<IAirportRepository> _airportRepository;
+        private Mock<IFlightRepository> _flightRepository;
         private List<AirportModel> _airportsList;
         private List<FlightModel> _expectingFlights;
         private List<FlightEntity> _flightEntities;
@@ -30,7 +30,6 @@ namespace TUIAssessmentTest.Business
         {
             _airportBusiness = new Mock<IAirportBusiness>();
             _flightService = new Mock<IFlightService>();
-            _tUIAssessmentDAL = new Mock<ITUIAssessmentDAL>();
 
             _airportsList = new List<AirportModel>
             {
@@ -97,15 +96,15 @@ namespace TUIAssessmentTest.Business
             _flightService.Setup(fs => fs.CalculateFuelVolumeForFlight(It.IsAny<double>(), It.IsAny<double>(), It.IsAny<double>())).Returns(42.0);
             _flightService.Setup(fs => fs.CalculateTimeOfFlight(It.IsAny<double>(), It.IsAny<double>())).Returns(12.0);
 
-            _tUIAssessmentDAL.Setup(dal => dal.SaveFlightEntity(It.IsAny<FlightEntity>())).Returns(new FlightEntity());
-            _tUIAssessmentDAL.Setup(dal => dal.GetAirportEntities()).Returns(_airportEntities);
-            _tUIAssessmentDAL.Setup(dal => dal.GetFlightEntities()).Returns(_flightEntities);
-            _tUIAssessmentDAL.Setup(dal => dal.UpdateFlightEntity(It.IsAny<FlightEntity>())).Returns(_flightEntityUpdated);
-            _tUIAssessmentDAL.Setup(dal => dal.RemoveFlightEntityByID(It.IsAny<int>())).Returns(true);
+            // _tUIAssessmentDAL.Setup(dal => dal.SaveFlightEntity(It.IsAny<FlightEntity>())).Returns(new FlightEntity());
+            // _tUIAssessmentDAL.Setup(dal => dal.GetAirportEntities()).Returns(_airportEntities);
+            // _tUIAssessmentDAL.Setup(dal => dal.GetFlightEntities()).Returns(_flightEntities);
+            // _tUIAssessmentDAL.Setup(dal => dal.UpdateFlightEntity(It.IsAny<FlightEntity>())).Returns(_flightEntityUpdated);
+            // _tUIAssessmentDAL.Setup(dal => dal.RemoveFlightEntityByID(It.IsAny<int>())).Returns(true);
 
             #endregion
 
-            _flightBusiness = new FlightBusiness(_airportBusiness.Object, _flightService.Object, _tUIAssessmentDAL.Object);
+            _flightBusiness = new FlightBusiness(_airportBusiness.Object, _flightService.Object, _flightRepository.Object);
         }
 
         [DataTestMethod]
@@ -126,7 +125,7 @@ namespace TUIAssessmentTest.Business
             _flightService.Verify(fs => fs.CalculateFuelVolumeForFlight(It.IsAny<double>(), It.IsAny<double>(), It.IsAny<double>()), Times.Once);
             _flightService.Verify(fs => fs.CalculateTimeOfFlight(It.IsAny<double>(), It.IsAny<double>()), Times.Once);
 
-            _tUIAssessmentDAL.Verify(dal => dal.SaveFlightEntity(It.IsAny<FlightEntity>()), Times.Once);
+            //_tUIAssessmentDAL.Verify(dal => dal.SaveFlightEntity(It.IsAny<FlightEntity>()), Times.Once);
 
             _airportBusiness.Verify(ab => ab.GetAirportById(It.IsAny<int>()), Times.AtLeastOnce());
             #endregion
