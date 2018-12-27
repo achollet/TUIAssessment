@@ -1,27 +1,22 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TUIAssessment.Web.Models;
 
 namespace TUIAssessment.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class FlightsReportController : Controller
     {
-        [HttpGet("[action]")]
-        public IEnumerable<FlightViewModel> GetReport()
-        {
-            var flights = new List<FlightViewModel>
-            {
-                new FlightViewModel {Id = 1, DepartureAirportCode = "CDG", ArrivalAirportCode = "LAX", Distance= 9086.71m, TimeOfFlight = "11:14:00", CreationDate = DateTime.Now },
-                new FlightViewModel {Id = 2, DepartureAirportCode = "CDG", ArrivalAirportCode = "JFK", Distance= 5849m, TimeOfFlight = "7:22:00", CreationDate = DateTime.Now.AddDays(-2), UpdateDate = DateTime.Now },
-                new FlightViewModel {Id = 3, DepartureAirportCode = "LAX", ArrivalAirportCode = "JFK", Distance= 3982.94m, TimeOfFlight = "5:11:00", CreationDate = DateTime.Now },
-                new FlightViewModel {Id = 4, DepartureAirportCode = "JFK", ArrivalAirportCode = "LAX", Distance= 3982.94m, TimeOfFlight = "5:11:00", CreationDate = DateTime.Now },
-            };
+        private readonly IFlightViewModelBuilder _flightViewModelBuilder;
 
-            return flights;
+        [HttpGet("[action]")]
+        public IActionResult GetReport()
+        {
+            var flights = _flightViewModelBuilder.BuildFlightViewModels();
+
+            if (!flights.Any())
+                return NotFound();
+
+            return Ok(flights);
         }
     }
 }
