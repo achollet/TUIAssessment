@@ -9,9 +9,11 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.3.2"/>
     <PackageReference Include="Moq" Version="4.10.0"/>
     <PackageReference Include="coverlet.msbuild" Version="2.4.0"/>
+    <PackageReference Include="FluentAssertions.AspNetCore.Mvc" Version="2.1.0"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TUIAssessmentBusiness\TUIAssessmentBusiness.csproj"/>
+    <ProjectReference Include="..\TUIAssessmentWeb\TUIAssessment.Web.csproj"/>
     <ProjectReference Include="..\TUIAssessmentDAL\TUIAssessment.DAL.csproj"/>
   </ItemGroup>
 </Project>

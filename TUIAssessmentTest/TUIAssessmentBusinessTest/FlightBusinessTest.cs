@@ -3,8 +3,6 @@ using TUIAssessmentBusiness.Services;
 using TUIAssessmentBusiness.Interfaces;
 using TUIAssessmentBusiness.Models;
 using System.Collections.Generic;
-using TUIAssessment.DAL.Entities;
-using TUIAssessment.DAL;
 using Moq;
 using System.Linq;
 using TUIAssessmentBusiness;
@@ -17,11 +15,12 @@ namespace TUIAssessmentTest.Business
         private Mock<IAirportBusiness> _airportBusiness;
         private Mock<IFlightService> _flightService;
         private Mock<IFlightRepository> _flightRepository;
+        private Mock<IAirportRepository> _airportRepository;
         private List<AirportModel> _airportsList;
         private List<FlightModel> _expectingFlights;
-        private List<FlightEntity> _flightEntities;
-        private FlightEntity _flightEntityUpdated;
-        private List<AirportEntity> _airportEntities;
+        private List<FlightModel> _flightModels;
+        private FlightModel _flightModelUpdated;
+        private List<AirportModel> _airportModels;
         private FlightBusiness _flightBusiness;
 
 
@@ -30,15 +29,16 @@ namespace TUIAssessmentTest.Business
         {
             _airportBusiness = new Mock<IAirportBusiness>();
             _flightService = new Mock<IFlightService>();
+            _flightRepository = new Mock<IFlightRepository>();
 
-            _airportsList = new List<AirportModel>
-            {
-                new AirportModel{Id = 1, Code = "CDG", Name = "Charles De Gaulle Airport", TakeOffEffort = 900.0, Coordinates = new CoordinatesModel(49.012780, 2.550000)},
-                new AirportModel{Id = 2, Code = "JFK", Name = "John Fitzgerald Kennedy Airport", TakeOffEffort = 600.0, Coordinates = new CoordinatesModel(40.6398, -73.7789)},
-                new AirportModel{Id = 3, Code = "LAX", Name = "Los Angeles International Airport", TakeOffEffort = 720.0, Coordinates = new CoordinatesModel(34.052230, -118.243680)},
-                new AirportModel{Id = 4, Code = "HDN", Name = "Tokyo-Haneda International Airport", TakeOffEffort = 1163.0, Coordinates = new CoordinatesModel(35.552260, 139.779690)},
-                new AirportModel{Id = 5, Code = "CPH", Name = "Copenhagen International Airport", TakeOffEffort = 637.0, Coordinates = new CoordinatesModel(55.623564, 12.660777)}
-            };
+            //_airportsList = new List<AirportModel>
+            //{
+            //    new AirportModel{Id = 1, Code = "CDG", Name = "Charles De Gaulle Airport", TakeOffEffort = 900.0, Coordinates = new CoordinatesModel(49.012780, 2.550000)},
+            //    new AirportModel{Id = 2, Code = "JFK", Name = "John Fitzgerald Kennedy Airport", TakeOffEffort = 600.0, Coordinates = new CoordinatesModel(40.6398, -73.7789)},
+            //    new AirportModel{Id = 3, Code = "LAX", Name = "Los Angeles International Airport", TakeOffEffort = 720.0, Coordinates = new CoordinatesModel(34.052230, -118.243680)},
+            //    new AirportModel{Id = 4, Code = "HDN", Name = "Tokyo-Haneda International Airport", TakeOffEffort = 1163.0, Coordinates = new CoordinatesModel(35.552260, 139.779690)},
+            //    new AirportModel{Id = 5, Code = "CPH", Name = "Copenhagen International Airport", TakeOffEffort = 637.0, Coordinates = new CoordinatesModel(55.623564, 12.660777)}
+            //};
 
             _expectingFlights = new List<FlightModel>
             {
@@ -49,29 +49,29 @@ namespace TUIAssessmentTest.Business
                 new FlightModel{ ID = 5, DepartureAirport = _airportsList[0], ArrivalAirport = _airportsList[3], Distance = 6666.66, Carburant = 42.0, Duration = 12.0}
             };
 
-            // _airportEntities = new List<AirportEntity>
-            // {
-            //     new AirportEntity { Id = 1, Code = "CDG", Name = "Paris-Charles De Gaulle", Latitude = 49.009642, Longitude = 2.547885 },
-            //     new AirportEntity { Id = 2, Code = "MXP", Name = "Milan-Malpensa", Latitude = 45.629646, Longitude = 8.724174 },
-            //     new AirportEntity { Id = 3, Code = "LHR", Name = "London-Heathrow", Latitude = 51.472401, Longitude = -0.467262 },
-            //     new AirportEntity { Id = 4, Code = "AMS", Name = "Amsterdam-Schipol", Latitude = 52.31488, Longitude = 4.757767 },
-            //     new AirportEntity { Id = 5, Code = "FRA", Name = "Frankfurt-Airport", Latitude = 50.035313, Longitude = 8.559723 },
-            //     new AirportEntity { Id = 6, Code = "JFK", Name = "New-York-John F. Kennedy", Latitude = 40.64444, Longitude = -73.778 },
-            //     new AirportEntity { Id = 7, Code = "LAX", Name = "Los Angeles International Airport", Latitude = 33.941154, Longitude = -118.409447 },
-            //     new AirportEntity { Id = 8, Code = "ATL", Name = "Atlanta-Hartsfield-Jackson", Latitude = 33.635899, Longitude = -84.428719 },
-            //     new AirportEntity { Id = 9, Code = "YUL", Name = "Montreal-Trudeau", Latitude = 45.470604, Longitude = -73.744354 },
-            //     new AirportEntity { Id = 10, Code = "YVR", Name = "Vancouver Airport", Latitude = 49.192398, Longitude = -123.179596 },
-            //     new AirportEntity { Id = 11, Code = "EZE", Name = "Buenos Aires-Pistarini", Latitude = -34.812111, Longitude = -58.539619 },
-            //     new AirportEntity { Id = 12, Code = "SJO", Name = "San Jose Airport", Latitude = 9.957228, Longitude = -84.139236 },
-            //     new AirportEntity { Id = 13, Code = "GIG", Name = "Rio De Janeiro International Airport", Latitude = -22.910809, Longitude = -43.163223 },
-            //     new AirportEntity { Id = 14, Code = "RUH", Name = "Riyad King Kahild International Airport", Latitude = 24.954332, Longitude = 46.700993 },
-            //     new AirportEntity { Id = 15, Code = "DOH", Name = "Doha International Airport", Latitude = 25.261309, Longitude = 51.562614 },
-            //     new AirportEntity { Id = 16, Code = "PVG", Name = "Shanghai Pudong International Airport", Latitude = 31.144997, Longitude = 121.811371 },
-            //     new AirportEntity { Id = 17, Code = "ICN", Name = "Seoul Incheon Airport", Latitude = 37.471603, Longitude = 126.455666 },
-            //     new AirportEntity { Id = 18, Code = "HND", Name = "Tokyo Haneda Airport", Latitude = 35.554993, Longitude = 139.780258 },
-            //     new AirportEntity { Id = 19, Code = "SYD", Name = "Sydney Airport", Latitude = -33.94997, Longitude = 151.178482 },
-            //     new AirportEntity { Id = 20, Code = "JNB", Name = "Johanesburg- OR Tambo International Airport", Latitude = -26.123140, Longitude = 28.243365 }
-            // };
+            _airportsList = new List<AirportModel>
+            {
+                new AirportModel { Id = 1, Code = "CDG", Name = "Paris-Charles De Gaulle", Coordinates = new CoordinatesModel(49.009642, 2.547885 )},
+                new AirportModel { Id = 2, Code = "MXP", Name = "Milan-Malpensa", Coordinates = new CoordinatesModel( 45.629646, 8.724174 )},
+                new AirportModel { Id = 3, Code = "LHR", Name = "London-Heathrow", Coordinates = new CoordinatesModel( 51.472401, -0.467262 )},
+                new AirportModel { Id = 4, Code = "AMS", Name = "Amsterdam-Schipol", Coordinates = new CoordinatesModel( 52.31488, 4.757767 )},
+                new AirportModel { Id = 5, Code = "FRA", Name = "Frankfurt-Airport", Coordinates = new CoordinatesModel( 50.035313, 8.559723 )},
+                new AirportModel { Id = 6, Code = "JFK", Name = "New-York-John F. Kennedy", Coordinates = new CoordinatesModel( 40.64444, -73.778 )},
+                new AirportModel { Id = 7, Code = "LAX", Name = "Los Angeles International Airport", Coordinates = new CoordinatesModel( 33.941154, -118.409447 )},
+                new AirportModel { Id = 8, Code = "ATL", Name = "Atlanta-Hartsfield-Jackson", Coordinates = new CoordinatesModel( 33.635899, -84.428719 )},
+                new AirportModel { Id = 9, Code = "YUL", Name = "Montreal-Trudeau", Coordinates = new CoordinatesModel( 45.470604, -73.744354 )},
+                new AirportModel { Id = 10, Code = "YVR", Name = "Vancouver Airport", Coordinates = new CoordinatesModel( 49.192398, -123.179596 )},
+                new AirportModel { Id = 11, Code = "EZE", Name = "Buenos Aires-Pistarini", Coordinates = new CoordinatesModel( -34.812111, -58.539619 )},
+                new AirportModel { Id = 12, Code = "SJO", Name = "San Jose Airport", Coordinates = new CoordinatesModel( 9.957228, -84.139236 )},
+                new AirportModel { Id = 13, Code = "GIG", Name = "Rio De Janeiro International Airport", Coordinates = new CoordinatesModel( -22.910809, -43.163223 )},
+                new AirportModel { Id = 14, Code = "RUH", Name = "Riyad King Kahild International Airport", Coordinates = new CoordinatesModel( 24.954332, 46.700993 )},
+                new AirportModel { Id = 15, Code = "DOH", Name = "Doha International Airport", Coordinates = new CoordinatesModel( 25.261309, 51.562614 )},
+                new AirportModel { Id = 16, Code = "PVG", Name = "Shanghai Pudong International Airport", Coordinates = new CoordinatesModel( 31.144997, 121.811371 )},
+                new AirportModel { Id = 17, Code = "ICN", Name = "Seoul Incheon Airport", Coordinates = new CoordinatesModel( 37.471603, 126.455666 )},
+                new AirportModel { Id = 18, Code = "HND", Name = "Tokyo Haneda Airport", Coordinates = new CoordinatesModel( 35.554993, 139.780258 )},
+                new AirportModel { Id = 19, Code = "SYD", Name = "Sydney Airport", Coordinates = new CoordinatesModel( -33.94997, 151.178482 )},
+                new AirportModel { Id = 20, Code = "JNB", Name = "Johanesburg- OR Tambo International Airport", Coordinates = new CoordinatesModel( -26.123140, 28.243365 )}
+            };
 
             // _flightEntities = new List<FlightEntity>
             // {
@@ -82,7 +82,7 @@ namespace TUIAssessmentTest.Business
             //     new FlightEntity{ Id = 5, DepartureAirportId = 1, ArrivalAirportId = 4, Distance = 6666.66, FuelQuantity = 42.0, TimeOfFlight = 12.0}
             // };
 
-            // _flightEntityUpdated = new FlightEntity { Id = 1, DepartureAirportId = 1, ArrivalAirportId = 2, Distance = 4206.66, FuelQuantity = 42.0, TimeOfFlight = 12.0 };
+             _flightModelUpdated = new FlightModel { ID = 1, DepartureAirport = _airportModels[1], ArrivalAirport= _airportModels[2], Distance = 4206.66, Carburant = 42.0, Duration = 12.0 };
 
             #region mocks setup
 
@@ -91,16 +91,16 @@ namespace TUIAssessmentTest.Business
             _airportBusiness.Setup(ab => ab.GetAirportById(3)).Returns(_airportsList[2]);
             _airportBusiness.Setup(ab => ab.GetAirportById(4)).Returns(_airportsList[3]);
             _airportBusiness.Setup(ab => ab.GetAirportById(5)).Returns(_airportsList[4]);
+            _airportBusiness.Setup(ab => ab.GetAllAirports()).Returns(_airportModels);
 
             _flightService.Setup(fs => fs.CalculateDistanceWithHaversineFormulae(It.IsAny<CoordinatesModel>(), It.IsAny<CoordinatesModel>())).Returns(6666.66);
             _flightService.Setup(fs => fs.CalculateFuelVolumeForFlight(It.IsAny<double>(), It.IsAny<double>(), It.IsAny<double>())).Returns(42.0);
             _flightService.Setup(fs => fs.CalculateTimeOfFlight(It.IsAny<double>(), It.IsAny<double>())).Returns(12.0);
 
-            // _tUIAssessmentDAL.Setup(dal => dal.SaveFlightEntity(It.IsAny<FlightEntity>())).Returns(new FlightEntity());
-            // _tUIAssessmentDAL.Setup(dal => dal.GetAirportEntities()).Returns(_airportEntities);
-            // _tUIAssessmentDAL.Setup(dal => dal.GetFlightEntities()).Returns(_flightEntities);
-            // _tUIAssessmentDAL.Setup(dal => dal.UpdateFlightEntity(It.IsAny<FlightEntity>())).Returns(_flightEntityUpdated);
-            // _tUIAssessmentDAL.Setup(dal => dal.RemoveFlightEntityByID(It.IsAny<int>())).Returns(true);
+            _flightRepository.Setup(repo => repo.SaveFlight(It.IsAny<FlightModel>())).Returns(true);
+            _flightRepository.Setup(repo => repo.GetFlights()).Returns(_flightModels);
+            _flightRepository.Setup(repo => repo.UpdateFlight(It.IsAny<FlightModel>())).Returns(_flightModelUpdated);
+            _flightRepository.Setup(repo => repo.RemoveFlightByID(It.IsAny<int>())).Returns(true);
 
             #endregion
 
@@ -125,7 +125,7 @@ namespace TUIAssessmentTest.Business
             _flightService.Verify(fs => fs.CalculateFuelVolumeForFlight(It.IsAny<double>(), It.IsAny<double>(), It.IsAny<double>()), Times.Once);
             _flightService.Verify(fs => fs.CalculateTimeOfFlight(It.IsAny<double>(), It.IsAny<double>()), Times.Once);
 
-            //_tUIAssessmentDAL.Verify(dal => dal.SaveFlightEntity(It.IsAny<FlightEntity>()), Times.Once);
+            _flightRepository.Verify(repo => repo.SaveFlight(It.IsAny<FlightModel>()), Times.Once);
 
             _airportBusiness.Verify(ab => ab.GetAirportById(It.IsAny<int>()), Times.AtLeastOnce());
             #endregion

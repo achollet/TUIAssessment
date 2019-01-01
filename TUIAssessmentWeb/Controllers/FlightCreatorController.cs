@@ -58,7 +58,7 @@ namespace TUIAssessment.Web.Controllers
         }
 
         [HttpPost("updateflight")]
-        public IActionResult DeleteFlight([FromBody]FlightViewModel flightViewModel)
+        public IActionResult UpdatedFlight([FromBody]FlightViewModel flightViewModel)
         {
             if (string.IsNullOrWhiteSpace(flightViewModel.ArrivalAirportCode) || string.IsNullOrWhiteSpace(flightViewModel.DepartureAirportCode))
                 return BadRequest();

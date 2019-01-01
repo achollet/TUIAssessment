@@ -8,6 +8,11 @@ namespace TUIAssessment.Web.Controllers
     {
         private readonly IFlightViewModelBuilder _flightViewModelBuilder;
 
+        public FlightsReportController(IFlightViewModelBuilder flightViewModelBuilder)
+        {
+            _flightViewModelBuilder = flightViewModelBuilder;
+        }
+
         [HttpGet("[action]")]
         public IActionResult GetReport()
         {
