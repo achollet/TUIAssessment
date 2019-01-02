@@ -15,12 +15,9 @@ namespace TUIAssessmentTest.Business
         private Mock<IAirportBusiness> _airportBusiness;
         private Mock<IFlightService> _flightService;
         private Mock<IFlightRepository> _flightRepository;
-        private Mock<IAirportRepository> _airportRepository;
         private List<AirportModel> _airportsList;
         private List<FlightModel> _expectingFlights;
-        private List<FlightModel> _flightModels;
         private FlightModel _flightModelUpdated;
-        private List<AirportModel> _airportModels;
         private FlightBusiness _flightBusiness;
 
 
@@ -30,24 +27,6 @@ namespace TUIAssessmentTest.Business
             _airportBusiness = new Mock<IAirportBusiness>();
             _flightService = new Mock<IFlightService>();
             _flightRepository = new Mock<IFlightRepository>();
-
-            //_airportsList = new List<AirportModel>
-            //{
-            //    new AirportModel{Id = 1, Code = "CDG", Name = "Charles De Gaulle Airport", TakeOffEffort = 900.0, Coordinates = new CoordinatesModel(49.012780, 2.550000)},
-            //    new AirportModel{Id = 2, Code = "JFK", Name = "John Fitzgerald Kennedy Airport", TakeOffEffort = 600.0, Coordinates = new CoordinatesModel(40.6398, -73.7789)},
-            //    new AirportModel{Id = 3, Code = "LAX", Name = "Los Angeles International Airport", TakeOffEffort = 720.0, Coordinates = new CoordinatesModel(34.052230, -118.243680)},
-            //    new AirportModel{Id = 4, Code = "HDN", Name = "Tokyo-Haneda International Airport", TakeOffEffort = 1163.0, Coordinates = new CoordinatesModel(35.552260, 139.779690)},
-            //    new AirportModel{Id = 5, Code = "CPH", Name = "Copenhagen International Airport", TakeOffEffort = 637.0, Coordinates = new CoordinatesModel(55.623564, 12.660777)}
-            //};
-
-            _expectingFlights = new List<FlightModel>
-            {
-                new FlightModel{ ID = 1, DepartureAirport = _airportsList[0], ArrivalAirport = _airportsList[1], Distance = 6666.66, Carburant = 42.0, Duration = 12.0},
-                new FlightModel{ ID = 2, DepartureAirport = _airportsList[1], ArrivalAirport = _airportsList[2], Distance = 6666.66, Carburant = 42.0, Duration = 12.0},
-                new FlightModel{ ID = 3, DepartureAirport = _airportsList[3], ArrivalAirport = _airportsList[4], Distance = 6666.66, Carburant = 42.0, Duration = 12.0},
-                new FlightModel{ ID = 4, DepartureAirport = _airportsList[1], ArrivalAirport = _airportsList[4], Distance = 6666.66, Carburant = 42.0, Duration = 12.0},
-                new FlightModel{ ID = 5, DepartureAirport = _airportsList[0], ArrivalAirport = _airportsList[3], Distance = 6666.66, Carburant = 42.0, Duration = 12.0}
-            };
 
             _airportsList = new List<AirportModel>
             {
@@ -70,35 +49,35 @@ namespace TUIAssessmentTest.Business
                 new AirportModel { Id = 17, Code = "ICN", Name = "Seoul Incheon Airport", Coordinates = new CoordinatesModel( 37.471603, 126.455666 )},
                 new AirportModel { Id = 18, Code = "HND", Name = "Tokyo Haneda Airport", Coordinates = new CoordinatesModel( 35.554993, 139.780258 )},
                 new AirportModel { Id = 19, Code = "SYD", Name = "Sydney Airport", Coordinates = new CoordinatesModel( -33.94997, 151.178482 )},
-                new AirportModel { Id = 20, Code = "JNB", Name = "Johanesburg- OR Tambo International Airport", Coordinates = new CoordinatesModel( -26.123140, 28.243365 )}
+                new AirportModel { Id = 20, Code = "JNB", Name = "Johanesburg- OR Tambo International Airport", Coordinates = new CoordinatesModel( -26.123140, 28.243365 )},
+                new AirportModel { Id = 21, Code = "CPH", Name = "Copenhagen International Airport", TakeOffEffort = 637.0, Coordinates = new CoordinatesModel(55.623564, 12.660777)}
             };
 
-            // _flightEntities = new List<FlightEntity>
-            // {
-            //     new FlightEntity{ Id = 1, DepartureAirportId = 1, ArrivalAirportId = 2, Distance = 6666.66, FuelQuantity = 42.0, TimeOfFlight = 12.0},
-            //     new FlightEntity{ Id = 2, DepartureAirportId = 2, ArrivalAirportId = 3, Distance = 6666.66, FuelQuantity = 42.0, TimeOfFlight = 12.0},
-            //     new FlightEntity{ Id = 3, DepartureAirportId = 4, ArrivalAirportId = 5, Distance = 6666.66, FuelQuantity = 42.0, TimeOfFlight = 12.0},
-            //     new FlightEntity{ Id = 4, DepartureAirportId = 2, ArrivalAirportId = 5, Distance = 6666.66, FuelQuantity = 42.0, TimeOfFlight = 12.0},
-            //     new FlightEntity{ Id = 5, DepartureAirportId = 1, ArrivalAirportId = 4, Distance = 6666.66, FuelQuantity = 42.0, TimeOfFlight = 12.0}
-            // };
+            _expectingFlights = new List<FlightModel>
+            {
+                new FlightModel{ ID = 1, DepartureAirport = _airportsList[0], ArrivalAirport = _airportsList[5], Distance = 6666.66, Carburant = 42.0, Duration = 12.0},
+                new FlightModel{ ID = 2, DepartureAirport = _airportsList[5], ArrivalAirport = _airportsList[6], Distance = 6666.66, Carburant = 42.0, Duration = 12.0},
+                new FlightModel{ ID = 3, DepartureAirport = _airportsList[6], ArrivalAirport = _airportsList[17], Distance = 6666.66, Carburant = 42.0, Duration = 12.0},
+                new FlightModel{ ID = 4, DepartureAirport = _airportsList[5], ArrivalAirport = _airportsList[20], Distance = 6666.66, Carburant = 42.0, Duration = 12.0},
+                new FlightModel{ ID = 5, DepartureAirport = _airportsList[0], ArrivalAirport = _airportsList[6], Distance = 6666.66, Carburant = 42.0, Duration = 12.0}
+            };
 
-             _flightModelUpdated = new FlightModel { ID = 1, DepartureAirport = _airportModels[1], ArrivalAirport= _airportModels[2], Distance = 4206.66, Carburant = 42.0, Duration = 12.0 };
+            _flightModelUpdated = new FlightModel { ID = 1, DepartureAirport = _airportsList[5], ArrivalAirport = _airportsList[6], Distance = 4206.66, Carburant = 42.0, Duration = 12.0 };
 
             #region mocks setup
+            for (int i = 0; i < _airportsList.Count; i++)
+            {
+                _airportBusiness.Setup(ab => ab.GetAirportById(i + 1)).Returns(_airportsList[i]);
+            }
 
-            _airportBusiness.Setup(ab => ab.GetAirportById(1)).Returns(_airportsList[0]);
-            _airportBusiness.Setup(ab => ab.GetAirportById(2)).Returns(_airportsList[1]);
-            _airportBusiness.Setup(ab => ab.GetAirportById(3)).Returns(_airportsList[2]);
-            _airportBusiness.Setup(ab => ab.GetAirportById(4)).Returns(_airportsList[3]);
-            _airportBusiness.Setup(ab => ab.GetAirportById(5)).Returns(_airportsList[4]);
-            _airportBusiness.Setup(ab => ab.GetAllAirports()).Returns(_airportModels);
+            _airportBusiness.Setup(ab => ab.GetAllAirports()).Returns(_airportsList);
 
             _flightService.Setup(fs => fs.CalculateDistanceWithHaversineFormulae(It.IsAny<CoordinatesModel>(), It.IsAny<CoordinatesModel>())).Returns(6666.66);
             _flightService.Setup(fs => fs.CalculateFuelVolumeForFlight(It.IsAny<double>(), It.IsAny<double>(), It.IsAny<double>())).Returns(42.0);
             _flightService.Setup(fs => fs.CalculateTimeOfFlight(It.IsAny<double>(), It.IsAny<double>())).Returns(12.0);
 
             _flightRepository.Setup(repo => repo.SaveFlight(It.IsAny<FlightModel>())).Returns(true);
-            _flightRepository.Setup(repo => repo.GetFlights()).Returns(_flightModels);
+            _flightRepository.Setup(repo => repo.GetFlights()).Returns(_expectingFlights);
             _flightRepository.Setup(repo => repo.UpdateFlight(It.IsAny<FlightModel>())).Returns(_flightModelUpdated);
             _flightRepository.Setup(repo => repo.RemoveFlightByID(It.IsAny<int>())).Returns(true);
 
@@ -108,11 +87,11 @@ namespace TUIAssessmentTest.Business
         }
 
         [DataTestMethod]
-        [DataRow(1, 2, 1)]
-        [DataRow(2, 3, 2)]
-        [DataRow(4, 5, 3)]
-        [DataRow(2, 5, 4)]
-        [DataRow(1, 4, 5)]
+        [DataRow(1, 6, 1)]
+        [DataRow(6, 7, 2)]
+        [DataRow(7, 18, 3)]
+        [DataRow(6, 21, 4)]
+        [DataRow(1, 7, 5)]
         public void FlightBusiness_CreateFlightMethod_Test(int departureAirportId, int arrivalAirportId, int expectingFlightId)
         {
             var resultingFlight = _flightBusiness.CreateFlight(departureAirportId, arrivalAirportId);
