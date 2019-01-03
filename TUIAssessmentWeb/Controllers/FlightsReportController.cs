@@ -34,9 +34,9 @@ namespace TUIAssessment.Web.Controllers
             if (id < 1)
                 return BadRequest();
 
-            _flightBusiness.DeleteFlightById(id);
+            var hasBeenDeleted = _flightBusiness.DeleteFlightById(id);
 
-            return Ok();
+            return hasBeenDeleted ? StatusCode(200) : StatusCode(400);
         }
 
         [HttpPost("updateflight")]
