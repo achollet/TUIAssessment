@@ -990,23 +990,23 @@ FNH:5
 end_of_record
 SF:C:\Users\achollet\Documents\PersonnalWorkspace\DotNetCore\TUIAssessment\TUIAssessmentBusiness\AirportBusiness.cs
 FN:15,TUIAssessmentBusiness.Models.AirportModel TUIAssessmentBusiness.AirportBusiness::GetAirportById(System.Int32)
-FNDA:0,TUIAssessmentBusiness.Models.AirportModel TUIAssessmentBusiness.AirportBusiness::GetAirportById(System.Int32)
-DA:16,0
+FNDA:2,TUIAssessmentBusiness.Models.AirportModel TUIAssessmentBusiness.AirportBusiness::GetAirportById(System.Int32)
+DA:16,2
 FN:17,System.Collections.Generic.IEnumerable`1<TUIAssessmentBusiness.Models.AirportModel> TUIAssessmentBusiness.AirportBusiness::GetAllAirports()
-FNDA:0,System.Collections.Generic.IEnumerable`1<TUIAssessmentBusiness.Models.AirportModel> TUIAssessmentBusiness.AirportBusiness::GetAllAirports()
-DA:18,0
+FNDA:1,System.Collections.Generic.IEnumerable`1<TUIAssessmentBusiness.Models.AirportModel> TUIAssessmentBusiness.AirportBusiness::GetAllAirports()
+DA:18,1
 FN:10,System.Void TUIAssessmentBusiness.AirportBusiness::.ctor(TUIAssessmentBusiness.Interfaces.IAirportRepository)
-FNDA:0,System.Void TUIAssessmentBusiness.AirportBusiness::.ctor(TUIAssessmentBusiness.Interfaces.IAirportRepository)
-DA:11,0
-DA:12,0
-DA:13,0
-DA:14,0
+FNDA:3,System.Void TUIAssessmentBusiness.AirportBusiness::.ctor(TUIAssessmentBusiness.Interfaces.IAirportRepository)
+DA:11,3
+DA:12,3
+DA:13,3
+DA:14,3
 LF:6
-LH:0
+LH:6
 BRF:0
 BRH:0
 FNF:3
-FNH:0
+FNH:3
 end_of_record
 SF:C:\Users\achollet\Documents\PersonnalWorkspace\DotNetCore\TUIAssessment\TUIAssessmentBusiness\FlightBusiness.cs
 FN:24,TUIAssessmentBusiness.Models.FlightModel TUIAssessmentBusiness.FlightBusiness::CreateFlight(System.Int32,System.Int32)
@@ -1135,20 +1135,20 @@ FNH:6
 end_of_record
 SF:C:\Users\achollet\Documents\PersonnalWorkspace\DotNetCore\TUIAssessment\TUIAssessmentBusiness\Models\AirportModel.cs
 FN:4,System.Int32 TUIAssessmentBusiness.Models.AirportModel::get_Id()
-FNDA:248,System.Int32 TUIAssessmentBusiness.Models.AirportModel::get_Id()
-DA:5,248
+FNDA:269,System.Int32 TUIAssessmentBusiness.Models.AirportModel::get_Id()
+DA:5,269
 FN:5,System.String TUIAssessmentBusiness.Models.AirportModel::get_Code()
-FNDA:226,System.String TUIAssessmentBusiness.Models.AirportModel::get_Code()
-DA:6,226
+FNDA:243,System.String TUIAssessmentBusiness.Models.AirportModel::get_Code()
+DA:6,243
 FN:6,System.String TUIAssessmentBusiness.Models.AirportModel::get_Name()
-FNDA:214,System.String TUIAssessmentBusiness.Models.AirportModel::get_Name()
-DA:7,214
+FNDA:231,System.String TUIAssessmentBusiness.Models.AirportModel::get_Name()
+DA:7,231
 FN:7,TUIAssessmentBusiness.Models.CoordinatesModel TUIAssessmentBusiness.Models.AirportModel::get_Coordinates()
-FNDA:218,TUIAssessmentBusiness.Models.CoordinatesModel TUIAssessmentBusiness.Models.AirportModel::get_Coordinates()
-DA:8,218
+FNDA:233,TUIAssessmentBusiness.Models.CoordinatesModel TUIAssessmentBusiness.Models.AirportModel::get_Coordinates()
+DA:8,233
 FN:8,System.Double TUIAssessmentBusiness.Models.AirportModel::get_TakeOffEffort()
-FNDA:53,System.Double TUIAssessmentBusiness.Models.AirportModel::get_TakeOffEffort()
-DA:9,53
+FNDA:70,System.Double TUIAssessmentBusiness.Models.AirportModel::get_TakeOffEffort()
+DA:9,70
 LF:5
 LH:5
 BRF:0
@@ -1158,18 +1158,18 @@ FNH:5
 end_of_record
 SF:C:\Users\achollet\Documents\PersonnalWorkspace\DotNetCore\TUIAssessment\TUIAssessmentBusiness\Models\CoordinatesModel.cs
 FN:4,System.Double TUIAssessmentBusiness.Models.CoordinatesModel::get_Latitude()
-FNDA:244,System.Double TUIAssessmentBusiness.Models.CoordinatesModel::get_Latitude()
-DA:5,244
+FNDA:259,System.Double TUIAssessmentBusiness.Models.CoordinatesModel::get_Latitude()
+DA:5,259
 FN:5,System.Double TUIAssessmentBusiness.Models.CoordinatesModel::get_Longitude()
-FNDA:232,System.Double TUIAssessmentBusiness.Models.CoordinatesModel::get_Longitude()
-DA:6,232
+FNDA:247,System.Double TUIAssessmentBusiness.Models.CoordinatesModel::get_Longitude()
+DA:6,247
 FN:7,System.Void TUIAssessmentBusiness.Models.CoordinatesModel::.ctor(System.Double,System.Double)
-FNDA:220,System.Void TUIAssessmentBusiness.Models.CoordinatesModel::.ctor(System.Double,System.Double)
-DA:8,220
-DA:9,220
-DA:10,220
-DA:11,220
-DA:12,220
+FNDA:235,System.Void TUIAssessmentBusiness.Models.CoordinatesModel::.ctor(System.Double,System.Double)
+DA:8,235
+DA:9,235
+DA:10,235
+DA:11,235
+DA:12,235
 LF:7
 LH:7
 BRF:0

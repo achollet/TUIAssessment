@@ -1,181 +1,266 @@
 {
   "TUIAssessment.DAL.dll": {
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentDAL/IServiceCollectionExtension.cs": {
-      "TUIAssessment.DAL.IServiceCollectionExtension": {
-        "Microsoft.Extensions.DependencyInjection.IServiceCollection TUIAssessment.DAL.IServiceCollectionExtension::AddTUIAssessmentDALExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentDAL\\EntityToModelMapperService.cs": {
+      "TUIAssessment.DAL.EntityToModelMapperService": {
+        "TUIAssessmentBusiness.Models.AirportModel TUIAssessment.DAL.EntityToModelMapperService::ConvertToAirportModel(TUIAssessment.DAL.Entities.AirportEntity)": {
           "Lines": {
-            "8": 0,
-            "9": 0,
             "11": 0,
-            "12": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentDAL/TUIAssessmentDAL.cs": {
-      "TUIAssessment.DAL.TUIAssessmentDAL": {
-        "TUIAssessment.DAL.Entities.AirportEntity TUIAssessment.DAL.TUIAssessmentDAL::GetAirportEntityByID(System.Int32)": {
-          "Lines": {
-            "24": 0,
-            "28": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "35": 0,
-            "36": 0
-          },
-          "Branches": []
-        },
-        "System.Collections.Generic.IEnumerable`1<TUIAssessment.DAL.Entities.AirportEntity> TUIAssessment.DAL.TUIAssessmentDAL::GetAirportEntities()": {
-          "Lines": {
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "47": 0,
-            "48": 0
-          },
-          "Branches": []
-        },
-        "TUIAssessment.DAL.Entities.FlightEntity TUIAssessment.DAL.TUIAssessmentDAL::GetFlightEntityByID(System.Int32)": {
-          "Lines": {
-            "51": 0,
-            "52": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "59": 0,
-            "60": 0
-          },
-          "Branches": []
-        },
-        "System.Collections.Generic.IEnumerable`1<TUIAssessment.DAL.Entities.FlightEntity> TUIAssessment.DAL.TUIAssessmentDAL::GetFlightEntities()": {
-          "Lines": {
-            "63": 0,
-            "64": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "71": 0,
-            "72": 0
-          },
-          "Branches": []
-        },
-        "TUIAssessment.DAL.Entities.FlightEntity TUIAssessment.DAL.TUIAssessmentDAL::UpdateFlightEntity(TUIAssessment.DAL.Entities.FlightEntity)": {
-          "Lines": {
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "89": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "94": 0,
-            "95": 0,
-            "97": 0,
-            "98": 0
-          },
-          "Branches": [
-            {
-              "Line": 84,
-              "Offset": 160,
-              "EndOffset": 162,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 84,
-              "Offset": 160,
-              "EndOffset": 266,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        },
-        "TUIAssessment.DAL.Entities.FlightEntity TUIAssessment.DAL.TUIAssessmentDAL::SaveFlightEntity(TUIAssessment.DAL.Entities.FlightEntity)": {
-          "Lines": {
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0,
-            "108": 0,
-            "109": 0
-          },
-          "Branches": []
-        },
-        "System.Boolean TUIAssessment.DAL.TUIAssessmentDAL::RemoveFlightEntityByID(System.Int32)": {
-          "Lines": {
-            "112": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0,
-            "122": 0,
-            "124": 0,
-            "125": 0
-          },
-          "Branches": [
-            {
-              "Line": 117,
-              "Offset": 145,
-              "EndOffset": 147,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 117,
-              "Offset": 145,
-              "EndOffset": 169,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        },
-        "Microsoft.EntityFrameworkCore.DbContextOptions TUIAssessment.DAL.TUIAssessmentDAL::GetDbContextOptions()": {
-          "Lines": {
-            "130": 0,
-            "131": 0,
-            "132": 0,
-            "133": 0
-          },
-          "Branches": []
-        },
-        "System.Void TUIAssessment.DAL.TUIAssessmentDAL::.ctor()": {
-          "Lines": {
+            "12": 0,
             "13": 0,
+            "14": 0,
+            "15": 0,
             "16": 0,
             "17": 0,
             "18": 0,
             "19": 0
           },
           "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<TUIAssessmentBusiness.Models.AirportModel> TUIAssessment.DAL.EntityToModelMapperService::ConvertToAirportModels(System.Collections.Generic.IEnumerable`1<TUIAssessment.DAL.Entities.AirportEntity>)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "TUIAssessment.DAL.Entities.FlightEntity TUIAssessment.DAL.EntityToModelMapperService::ConvertToFlightEntity(TUIAssessmentBusiness.Models.FlightModel)": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        },
+        "TUIAssessmentBusiness.Models.FlightModel TUIAssessment.DAL.EntityToModelMapperService::ConvertToFlightModel(TUIAssessment.DAL.Entities.FlightEntity)": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<TUIAssessmentBusiness.Models.FlightModel> TUIAssessment.DAL.EntityToModelMapperService::ConvertToFlightModels(System.Collections.Generic.IEnumerable`1<TUIAssessment.DAL.Entities.FlightEntity>)": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": []
         }
       }
     },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentDAL/TUIAssessmentDALContext.cs": {
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentDAL\\IServiceCollectionExtension.cs": {
+      "TUIAssessment.DAL.IServiceCollectionExtension": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection TUIAssessment.DAL.IServiceCollectionExtension::AddTUIAssessmentDALExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentDAL\\SqlLiteAirportRepository.cs": {
+      "TUIAssessment.DAL.SqlLiteAirportRepository": {
+        "TUIAssessmentBusiness.Models.AirportModel TUIAssessment.DAL.SqlLiteAirportRepository::GetAirportModelByID(System.Int32)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<TUIAssessmentBusiness.Models.AirportModel> TUIAssessment.DAL.SqlLiteAirportRepository::GetAirportModels()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessment.DAL.SqlLiteAirportRepository::.ctor(TUIAssessment.DAL.ITUIAssessmentDAL,TUIAssessment.DAL.IEntityToModelMapperService)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentDAL\\SqlLiteFlightRepository.cs": {
+      "TUIAssessment.DAL.SqlLiteFlightRepository": {
+        "TUIAssessmentBusiness.Models.FlightModel TUIAssessment.DAL.SqlLiteFlightRepository::GetFlightByID(System.Int32)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<TUIAssessmentBusiness.Models.FlightModel> TUIAssessment.DAL.SqlLiteFlightRepository::GetFlights()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean TUIAssessment.DAL.SqlLiteFlightRepository::RemoveFlightByID(System.Int32)": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean TUIAssessment.DAL.SqlLiteFlightRepository::SaveFlight(TUIAssessmentBusiness.Models.FlightModel)": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0
+          },
+          "Branches": []
+        },
+        "TUIAssessmentBusiness.Models.FlightModel TUIAssessment.DAL.SqlLiteFlightRepository::UpdateFlight(TUIAssessmentBusiness.Models.FlightModel)": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessment.DAL.SqlLiteFlightRepository::.ctor(TUIAssessment.DAL.ITUIAssessmentDAL,TUIAssessment.DAL.IEntityToModelMapperService)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentDAL\\TUIAssessmentDAL.cs": {
+      "TUIAssessment.DAL.TUIAssessmentDAL": {
+        "System.Boolean TUIAssessment.DAL.TUIAssessmentDAL::DeleteFlightEntityByID(System.Int32)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<TUIAssessment.DAL.Entities.AirportEntity> TUIAssessment.DAL.TUIAssessmentDAL::GetAirportEntities()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        },
+        "TUIAssessment.DAL.Entities.AirportEntity TUIAssessment.DAL.TUIAssessmentDAL::GetAirportEntityByID(System.Int32)": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<TUIAssessment.DAL.Entities.FlightEntity> TUIAssessment.DAL.TUIAssessmentDAL::GetFlightEntities()": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        },
+        "TUIAssessment.DAL.Entities.FlightEntity TUIAssessment.DAL.TUIAssessmentDAL::GetFlightEntityByID(System.Int32)": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean TUIAssessment.DAL.TUIAssessmentDAL::SaveFlightEntity(TUIAssessment.DAL.Entities.FlightEntity)": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean TUIAssessment.DAL.TUIAssessmentDAL::UpdateFlightEntity(TUIAssessment.DAL.Entities.FlightEntity)": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessment.DAL.TUIAssessmentDAL::.ctor(TUIAssessment.DAL.TUIAssessmentDALContext)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentDAL\\TUIAssessmentDALContext.cs": {
       "TUIAssessment.DAL.TUIAssessmentDALContext": {
         "Microsoft.EntityFrameworkCore.DbSet`1<TUIAssessment.DAL.Entities.AirportEntity> TUIAssessment.DAL.TUIAssessmentDALContext::get_Airports()": {
           "Lines": {
@@ -191,11 +276,573 @@
         },
         "System.Void TUIAssessment.DAL.TUIAssessmentDALContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
           "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "46": 0
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessment.DAL.TUIAssessmentDALContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<TUIAssessment.DAL.TUIAssessmentDALContext>)": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentDAL\\Entities\\AirportEntity.cs": {
+      "TUIAssessment.DAL.Entities.AirportEntity": {
+        "System.Int32 TUIAssessment.DAL.Entities.AirportEntity::get_Id()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String TUIAssessment.DAL.Entities.AirportEntity::get_Code()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String TUIAssessment.DAL.Entities.AirportEntity::get_Name()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessment.DAL.Entities.AirportEntity::get_Latitude()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessment.DAL.Entities.AirportEntity::get_Longitude()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentDAL\\Entities\\FlightEntity.cs": {
+      "TUIAssessment.DAL.Entities.FlightEntity": {
+        "System.Int32 TUIAssessment.DAL.Entities.FlightEntity::get_Id()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 TUIAssessment.DAL.Entities.FlightEntity::get_DepartureAirportId()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 TUIAssessment.DAL.Entities.FlightEntity::get_ArrivalAirportId()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessment.DAL.Entities.FlightEntity::get_Distance()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessment.DAL.Entities.FlightEntity::get_TimeOfFlight()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessment.DAL.Entities.FlightEntity::get_FuelQuantity()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime TUIAssessment.DAL.Entities.FlightEntity::get_Creation()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime TUIAssessment.DAL.Entities.FlightEntity::get_Update()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "TUIAssessment.Web.dll": {
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Program.cs": {
+      "TUIAssessment.Web.Program": {
+        "System.Void TUIAssessment.Web.Program::Main(System.String[])": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Hosting.IWebHost TUIAssessment.Web.Program::BuildWebHost(System.String[])": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Startup.cs": {
+      "TUIAssessment.Web.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration TUIAssessment.Web.Startup::get_Configuration()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessment.Web.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessment.Web.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 9,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 56,
+              "Offset": 70,
+              "EndOffset": 72,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 56,
+              "Offset": 70,
+              "EndOffset": 95,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void TUIAssessment.Web.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      },
+      "TUIAssessment.Web.Startup/<>c__DisplayClass4_0": {
+        "System.Void TUIAssessment.Web.Startup/<>c__DisplayClass4_0::<ConfigureServices>b__0(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 13,
+              "EndOffset": 38,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Models\\AirportViewModel.cs": {
+      "TUIAssessment.Web.Models.AirportViewModel": {
+        "System.String TUIAssessment.Web.Models.AirportViewModel::get_Code()": {
+          "Lines": {
+            "5": 22
+          },
+          "Branches": []
+        },
+        "System.String TUIAssessment.Web.Models.AirportViewModel::get_Name()": {
+          "Lines": {
+            "6": 42
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessment.Web.Models.AirportViewModel::.ctor(System.String,System.String)": {
+          "Lines": {
+            "8": 11,
+            "9": 11,
+            "10": 11,
+            "11": 11,
+            "12": 11
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Models\\FlightViewModel.cs": {
+      "TUIAssessment.Web.Models.FlightViewModel": {
+        "System.Int32 TUIAssessment.Web.Models.FlightViewModel::get_Id()": {
+          "Lines": {
+            "7": 6
+          },
+          "Branches": []
+        },
+        "System.String TUIAssessment.Web.Models.FlightViewModel::get_DepartureAirportCode()": {
+          "Lines": {
+            "8": 6
+          },
+          "Branches": []
+        },
+        "System.String TUIAssessment.Web.Models.FlightViewModel::get_ArrivalAirportCode()": {
+          "Lines": {
+            "9": 10
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessment.Web.Models.FlightViewModel::get_Distance()": {
+          "Lines": {
+            "10": 6
+          },
+          "Branches": []
+        },
+        "System.String TUIAssessment.Web.Models.FlightViewModel::get_TimeOfFlight()": {
+          "Lines": {
+            "11": 6
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessment.Web.Models.FlightViewModel::get_VolumeOfCarburant()": {
+          "Lines": {
+            "12": 6
+          },
+          "Branches": []
+        },
+        "System.DateTime TUIAssessment.Web.Models.FlightViewModel::get_CreationDate()": {
+          "Lines": {
+            "13": 6
+          },
+          "Branches": []
+        },
+        "System.DateTime TUIAssessment.Web.Models.FlightViewModel::get_UpdateDate()": {
+          "Lines": {
+            "14": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Migrations\\20181114125725_InitialCreate.cs": {
+      "TUIAssessment.Web.Migrations.InitialCreate": {
+        "System.Void TUIAssessment.Web.Migrations.InitialCreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
             "15": 0,
             "16": 0,
             "17": 0,
+            "18": 0,
             "19": 0,
             "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0
+          },
+          "Branches": [
+            {
+              "Line": 10,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 10,
+              "Offset": 13,
+              "EndOffset": 38,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 10,
+              "Offset": 45,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 10,
+              "Offset": 45,
+              "EndOffset": 70,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 88,
+              "EndOffset": 90,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 88,
+              "EndOffset": 113,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 120,
+              "EndOffset": 122,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 120,
+              "EndOffset": 145,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void TUIAssessment.Web.Migrations.InitialCreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Migrations\\20181114125725_InitialCreate.Designer.cs": {
+      "TUIAssessment.Web.Migrations.InitialCreate": {
+        "System.Void TUIAssessment.Web.Migrations.InitialCreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
             "24": 0,
             "25": 0,
             "26": 0,
@@ -218,319 +865,450 @@
             "43": 0,
             "44": 0,
             "45": 0,
-            "48": 0
-          },
-          "Branches": []
-        },
-        "System.Void TUIAssessment.DAL.TUIAssessmentDALContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
-          "Lines": {
-            "11": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentDAL/Entities/AirportEntity.cs": {
-      "TUIAssessment.DAL.Entities.AirportEntity": {
-        "System.Int32 TUIAssessment.DAL.Entities.AirportEntity::get_Id()": {
-          "Lines": {
-            "10": 160
-          },
-          "Branches": []
-        },
-        "System.String TUIAssessment.DAL.Entities.AirportEntity::get_Code()": {
-          "Lines": {
-            "12": 160
-          },
-          "Branches": []
-        },
-        "System.String TUIAssessment.DAL.Entities.AirportEntity::get_Name()": {
-          "Lines": {
-            "14": 160
-          },
-          "Branches": []
-        },
-        "System.Double TUIAssessment.DAL.Entities.AirportEntity::get_Latitude()": {
-          "Lines": {
-            "16": 160
-          },
-          "Branches": []
-        },
-        "System.Double TUIAssessment.DAL.Entities.AirportEntity::get_Longitude()": {
-          "Lines": {
-            "18": 160
-          },
-          "Branches": []
-        }
-      }
-    },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentDAL/Entities/FlightEntity.cs": {
-      "TUIAssessment.DAL.Entities.FlightEntity": {
-        "System.Int32 TUIAssessment.DAL.Entities.FlightEntity::get_Id()": {
-          "Lines": {
-            "7": 54
-          },
-          "Branches": []
-        },
-        "System.Int32 TUIAssessment.DAL.Entities.FlightEntity::get_DepartureAirportId()": {
-          "Lines": {
-            "8": 60
-          },
-          "Branches": []
-        },
-        "System.Int32 TUIAssessment.DAL.Entities.FlightEntity::get_ArrivalAirportId()": {
-          "Lines": {
-            "9": 60
-          },
-          "Branches": []
-        },
-        "System.Double TUIAssessment.DAL.Entities.FlightEntity::get_Distance()": {
-          "Lines": {
-            "10": 60
-          },
-          "Branches": []
-        },
-        "System.Double TUIAssessment.DAL.Entities.FlightEntity::get_TimeOfFlight()": {
-          "Lines": {
-            "11": 60
-          },
-          "Branches": []
-        },
-        "System.Double TUIAssessment.DAL.Entities.FlightEntity::get_FuelQuantity()": {
-          "Lines": {
-            "12": 60
-          },
-          "Branches": []
-        },
-        "System.DateTime TUIAssessment.DAL.Entities.FlightEntity::get_Creation()": {
-          "Lines": {
-            "13": 12
-          },
-          "Branches": []
-        },
-        "System.DateTime TUIAssessment.DAL.Entities.FlightEntity::get_Update()": {
-          "Lines": {
-            "14": 6
-          },
-          "Branches": []
-        }
-      }
-    }
-  },
-  "TUIAssessmentBuisness.dll": {
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentBuisness/AirportBusiness.cs": {
-      "TUIAssessmentBuisness.AirportBusiness": {
-        "TUIAssessmentBuisness.Models.AirportModel TUIAssessmentBuisness.AirportBusiness::GetAirportById(System.Int32)": {
-          "Lines": {
-            "9": 0,
-            "10": 0
-          },
-          "Branches": []
-        },
-        "System.Collections.Generic.IEnumerable`1<TUIAssessmentBuisness.Models.AirportModel> TUIAssessmentBuisness.AirportBusiness::GetAllAirports()": {
-          "Lines": {
-            "14": 0,
-            "15": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentBuisness/FlightBusiness.cs": {
-      "TUIAssessmentBuisness.FlightBusiness": {
-        "TUIAssessmentBuisness.Models.FlightModel TUIAssessmentBuisness.FlightBusiness::CreateFlight(System.Int32,System.Int32)": {
-          "Lines": {
-            "26": 5,
-            "27": 5,
-            "29": 5,
-            "30": 5,
-            "32": 5,
-            "33": 5,
-            "35": 5,
-            "36": 5,
-            "37": 5,
-            "38": 5,
-            "39": 5,
-            "40": 5,
-            "42": 5,
-            "44": 5,
-            "46": 5,
-            "48": 5,
-            "49": 5
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "100": 0
           },
           "Branches": [
             {
-              "Line": 32,
-              "Offset": 36,
-              "EndOffset": 38,
+              "Line": 21,
+              "Offset": 30,
+              "EndOffset": 32,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 32,
-              "Offset": 36,
-              "EndOffset": 44,
+              "Line": 21,
+              "Offset": 30,
+              "EndOffset": 55,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 5
+              "Hits": 0
             },
             {
-              "Line": 33,
-              "Offset": 53,
-              "EndOffset": 55,
+              "Line": 70,
+              "Offset": 73,
+              "EndOffset": 75,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 33,
-              "Offset": 53,
-              "EndOffset": 61,
+              "Line": 70,
+              "Offset": 73,
+              "EndOffset": 98,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 5
-            },
-            {
-              "Line": 35,
-              "Offset": 68,
-              "EndOffset": 70,
-              "Path": 0,
-              "Ordinal": 4,
-              "Hits": 5
-            },
-            {
-              "Line": 35,
-              "Offset": 68,
-              "EndOffset": 76,
-              "Path": 1,
-              "Ordinal": 5,
               "Hits": 0
-            },
-            {
-              "Line": 35,
-              "Offset": 81,
-              "EndOffset": 83,
-              "Path": 0,
-              "Ordinal": 6,
-              "Hits": 5
-            },
-            {
-              "Line": 35,
-              "Offset": 81,
-              "EndOffset": 181,
-              "Path": 1,
-              "Ordinal": 7,
-              "Hits": 5
             }
           ]
-        },
-        "System.Collections.Generic.IEnumerable`1<TUIAssessmentBuisness.Models.FlightModel> TUIAssessmentBuisness.FlightBusiness::GetAllFlights()": {
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Migrations\\TUIAssessmentDALContextModelSnapshot.cs": {
+      "TUIAssessment.Web.Migrations.TUIAssessmentDALContextModelSnapshot": {
+        "System.Void TUIAssessment.Web.Migrations.TUIAssessmentDALContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
           "Lines": {
-            "52": 1,
-            "53": 1,
-            "54": 1,
-            "56": 13,
-            "57": 5,
-            "58": 5,
-            "59": 5,
-            "60": 5,
-            "62": 1,
-            "63": 1
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "98": 0
           },
           "Branches": [
             {
-              "Line": 56,
-              "Offset": 62,
-              "EndOffset": 29,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 5
-            },
-            {
-              "Line": 56,
-              "Offset": 62,
-              "EndOffset": 64,
+              "Line": 19,
+              "Offset": 30,
+              "EndOffset": 32,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 30,
+              "EndOffset": 55,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 68,
+              "Offset": 73,
+              "EndOffset": 75,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 68,
+              "Offset": 73,
+              "EndOffset": 98,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Controllers\\FlightCreatorController.cs": {
+      "TUIAssessment.Web.Controllers.FlightCreatorController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult TUIAssessment.Web.Controllers.FlightCreatorController::GetAirports()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 24,
+              "EndOffset": 26,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 24,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
             }
           ]
         },
-        "System.Boolean TUIAssessmentBuisness.FlightBusiness::DeleteFlightById(System.Int32)": {
+        "Microsoft.AspNetCore.Mvc.IActionResult TUIAssessment.Web.Controllers.FlightCreatorController::CreateFlight(System.Int32,System.Int32)": {
           "Lines": {
-            "66": 1,
-            "67": 1,
-            "68": 1
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0
           },
-          "Branches": []
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 3,
+              "EndOffset": 11,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 14,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 47,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 47,
+              "EndOffset": 63,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
         },
-        "TUIAssessmentBuisness.Models.FlightModel TUIAssessmentBuisness.FlightBusiness::UpdateFlight(TUIAssessmentBuisness.Models.FlightModel)": {
+        "Microsoft.AspNetCore.Mvc.IActionResult TUIAssessment.Web.Controllers.FlightCreatorController::DeleteFlight(System.Int32)": {
           "Lines": {
-            "71": 1,
-            "72": 1,
-            "74": 1,
-            "76": 1,
-            "77": 1
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0
           },
-          "Branches": []
+          "Branches": [
+            {
+              "Line": 54,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 7,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
         },
-        "TUIAssessment.DAL.Entities.FlightEntity TUIAssessmentBuisness.FlightBusiness::SetFlightEntity(TUIAssessmentBuisness.Models.FlightModel)": {
+        "Microsoft.AspNetCore.Mvc.IActionResult TUIAssessment.Web.Controllers.FlightCreatorController::UpdatedFlight(TUIAssessment.Web.Models.FlightViewModel)": {
           "Lines": {
-            "80": 6,
-            "81": 6,
-            "82": 6,
-            "83": 6,
-            "84": 6,
-            "85": 6,
-            "86": 6,
-            "87": 6,
-            "88": 6,
-            "89": 6,
-            "90": 6
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "66": 0,
+            "68": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0
           },
-          "Branches": []
+          "Branches": [
+            {
+              "Line": 63,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 12,
+              "EndOffset": 27,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 30,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 30,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 70,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 70,
+              "Offset": 75,
+              "EndOffset": 86,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
         },
-        "TUIAssessmentBuisness.Models.FlightModel TUIAssessmentBuisness.FlightBusiness::SetFlightFromFlightEntity(TUIAssessment.DAL.Entities.FlightEntity)": {
+        "System.Void TUIAssessment.Web.Controllers.FlightCreatorController::.ctor(TUIAssessment.Web.Controllers.IAirportViewModelBuilder,TUIAssessment.Web.Controllers.IFlightViewModelBuilder,TUIAssessmentBusiness.Interfaces.IFlightBusiness)": {
           "Lines": {
-            "93": 6,
-            "94": 6,
-            "95": 6,
-            "96": 6,
-            "97": 6,
-            "98": 6,
-            "99": 6,
-            "100": 6,
-            "101": 6,
-            "102": 6,
-            "104": 6,
-            "105": 6,
-            "107": 6,
-            "108": 6
-          },
-          "Branches": []
-        },
-        "System.Void TUIAssessmentBuisness.FlightBusiness::.ctor(TUIAssessmentBuisness.IAirportBusiness,TUIAssessmentBuisness.Services.IFlightService,TUIAssessment.DAL.ITUIAssessmentDAL)": {
-          "Lines": {
-            "15": 8,
-            "16": 8,
-            "18": 8,
-            "19": 8,
-            "20": 8,
-            "21": 8,
-            "22": 8,
-            "23": 8
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
           },
           "Branches": []
         }
       }
     },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentBuisness/IServiceCollectionExtension.cs": {
-      "TUIAssessmentBuisness.IServiceCollectionExtension": {
-        "Microsoft.Extensions.DependencyInjection.IServiceCollection TUIAssessmentBuisness.IServiceCollectionExtension::AddTUIAssessmentBusinessExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Controllers\\FlightsReportController.cs": {
+      "TUIAssessment.Web.Controllers.FlightsReportController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult TUIAssessment.Web.Controllers.FlightsReportController::GetReport()": {
           "Lines": {
-            "9": 0,
-            "10": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 24,
+              "EndOffset": 26,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 21,
+              "Offset": 24,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void TUIAssessment.Web.Controllers.FlightsReportController::.ctor(TUIAssessment.Web.Controllers.IFlightViewModelBuilder)": {
+          "Lines": {
             "11": 0,
             "12": 0,
             "13": 0,
@@ -540,191 +1318,524 @@
         }
       }
     },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentBuisness/Services/FlightService.cs": {
-      "TUIAssessmentBuisness.Services.FlightService": {
-        "System.Double TUIAssessmentBuisness.Services.FlightService::CalculateDistanceWithHaversineFormulae(TUIAssessmentBuisness.Models.CoordinatesModel,TUIAssessmentBuisness.Models.CoordinatesModel)": {
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Controllers\\HomeController.cs": {
+      "TUIAssessment.Web.Controllers.HomeController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult TUIAssessment.Web.Controllers.HomeController::Index()": {
           "Lines": {
-            "18": 6,
-            "19": 6,
-            "21": 6,
-            "22": 6
+            "13": 0,
+            "14": 0,
+            "15": 0
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Services.FlightService::CalculateDistanceWithVicentyFormulae(TUIAssessmentBuisness.Models.CoordinatesModel,TUIAssessmentBuisness.Models.CoordinatesModel)": {
+        "Microsoft.AspNetCore.Mvc.IActionResult TUIAssessment.Web.Controllers.HomeController::Error()": {
           "Lines": {
-            "31": 0,
-            "32": 0,
-            "34": 0,
-            "35": 0
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 18,
+              "EndOffset": 20,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 18,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 30,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 30,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Controllers\\AirportViewModelBuilder.cs": {
+      "TUIAssessmentWeb.Controllers.AirportViewModelBuilder": {
+        "System.Collections.Generic.IEnumerable`1<TUIAssessment.Web.Models.AirportViewModel> TUIAssessmentWeb.Controllers.AirportViewModelBuilder::BuildAirportList()": {
+          "Lines": {
+            "20": 3,
+            "21": 3,
+            "23": 9,
+            "24": 3
+          },
+          "Branches": [
+            {
+              "Line": 23,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 23,
+              "Offset": 20,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void TUIAssessmentWeb.Controllers.AirportViewModelBuilder::.ctor(TUIAssessmentBusiness.Interfaces.IAirportBusiness)": {
+          "Lines": {
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentWeb\\Controllers\\FlightViewModelBuilder.cs": {
+      "TUIAssessmentWeb.Controllers.FlightViewModelBuilder": {
+        "TUIAssessment.Web.Models.FlightViewModel TUIAssessmentWeb.Controllers.FlightViewModelBuilder::Build(TUIAssessmentBusiness.Models.FlightModel)": {
+          "Lines": {
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Services.FlightService::CalculateFuelVolumeForFlight(System.Double,System.Double,System.Double)": {
+        "System.Collections.Generic.IEnumerable`1<TUIAssessment.Web.Models.FlightViewModel> TUIAssessmentWeb.Controllers.FlightViewModelBuilder::BuildFlightViewModels()": {
           "Lines": {
+            "33": 0
+          },
+          "Branches": []
+        },
+        "TUIAssessmentBusiness.Models.FlightModel TUIAssessmentWeb.Controllers.FlightViewModelBuilder::ConvertFlightViewModelToFlightModel(TUIAssessment.Web.Models.FlightViewModel)": {
+          "Lines": {
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "41": 2,
+            "42": 6,
+            "43": 1,
+            "44": 1,
             "45": 1,
             "46": 1,
-            "47": 1
+            "47": 1,
+            "48": 1,
+            "50": 1,
+            "51": 1
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Services.FlightService::CalculateTimeOfFlight(System.Double,System.Double)": {
+        "System.String TUIAssessmentWeb.Controllers.FlightViewModelBuilder::ConvertDurationToTimeString(System.Double)": {
           "Lines": {
+            "55": 1,
             "56": 1,
             "57": 1,
-            "58": 1
+            "58": 1,
+            "59": 1,
+            "60": 1
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Services.FlightService::HaversineFormulae(TUIAssessmentBuisness.Models.CoordinatesModel,TUIAssessmentBuisness.Models.CoordinatesModel)": {
+        "System.Double TUIAssessmentWeb.Controllers.FlightViewModelBuilder::ConvertTimeStringToDuration(System.String)": {
           "Lines": {
-            "63": 6,
+            "63": 1,
+            "64": 1,
+            "65": 1,
+            "66": 1,
+            "67": 1,
+            "68": 1
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessmentWeb.Controllers.FlightViewModelBuilder::.ctor(TUIAssessmentBusiness.Interfaces.IFlightBusiness,TUIAssessmentBusiness.Interfaces.IAirportBusiness)": {
+          "Lines": {
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "TUIAssessmentBusiness.dll": {
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentBusiness\\AirportBusiness.cs": {
+      "TUIAssessmentBusiness.AirportBusiness": {
+        "TUIAssessmentBusiness.Models.AirportModel TUIAssessmentBusiness.AirportBusiness::GetAirportById(System.Int32)": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<TUIAssessmentBusiness.Models.AirportModel> TUIAssessmentBusiness.AirportBusiness::GetAllAirports()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessmentBusiness.AirportBusiness::.ctor(TUIAssessmentBusiness.Interfaces.IAirportRepository)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentBusiness\\FlightBusiness.cs": {
+      "TUIAssessmentBusiness.FlightBusiness": {
+        "TUIAssessmentBusiness.Models.FlightModel TUIAssessmentBusiness.FlightBusiness::CreateFlight(System.Int32,System.Int32)": {
+          "Lines": {
+            "25": 5,
+            "26": 5,
+            "28": 5,
+            "29": 5,
+            "31": 5,
+            "32": 5,
+            "34": 5,
+            "35": 5,
+            "36": 5,
+            "37": 5,
+            "38": 5,
+            "39": 5,
+            "41": 5,
+            "43": 5,
+            "45": 5,
+            "46": 5
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 36,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 5
+            },
+            {
+              "Line": 32,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 53,
+              "EndOffset": 61,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 5
+            },
+            {
+              "Line": 34,
+              "Offset": 68,
+              "EndOffset": 70,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 5
+            },
+            {
+              "Line": 34,
+              "Offset": 68,
+              "EndOffset": 76,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 79,
+              "EndOffset": 81,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 5
+            },
+            {
+              "Line": 34,
+              "Offset": 79,
+              "EndOffset": 179,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 5
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<TUIAssessmentBusiness.Models.FlightModel> TUIAssessmentBusiness.FlightBusiness::GetAllFlights()": {
+          "Lines": {
+            "48": 1
+          },
+          "Branches": []
+        },
+        "System.Boolean TUIAssessmentBusiness.FlightBusiness::DeleteFlightById(System.Int32)": {
+          "Lines": {
+            "50": 1
+          },
+          "Branches": []
+        },
+        "TUIAssessmentBusiness.Models.FlightModel TUIAssessmentBusiness.FlightBusiness::UpdateFlight(TUIAssessmentBusiness.Models.FlightModel)": {
+          "Lines": {
+            "52": 1
+          },
+          "Branches": []
+        },
+        "System.Void TUIAssessmentBusiness.FlightBusiness::.ctor(TUIAssessmentBusiness.Interfaces.IAirportBusiness,TUIAssessmentBusiness.Interfaces.IFlightService,TUIAssessmentBusiness.Interfaces.IFlightRepository)": {
+          "Lines": {
+            "14": 8,
+            "15": 8,
+            "17": 8,
+            "18": 8,
+            "19": 8,
+            "20": 8,
+            "21": 8,
+            "22": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentBusiness\\IServiceCollectionExtension.cs": {
+      "TUIAssessmentBusiness.IServiceCollectionExtension": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection TUIAssessmentBusiness.IServiceCollectionExtension::AddTUIAssessmentBusinessExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentBusiness\\Services\\FlightService.cs": {
+      "TUIAssessmentBusiness.Services.FlightService": {
+        "System.Double TUIAssessmentBusiness.Services.FlightService::CalculateDistanceWithHaversineFormulae(TUIAssessmentBusiness.Models.CoordinatesModel,TUIAssessmentBusiness.Models.CoordinatesModel)": {
+          "Lines": {
+            "19": 6,
+            "20": 6,
+            "22": 6,
+            "23": 6
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessmentBusiness.Services.FlightService::CalculateDistanceWithVicentyFormulae(TUIAssessmentBusiness.Models.CoordinatesModel,TUIAssessmentBusiness.Models.CoordinatesModel)": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessmentBusiness.Services.FlightService::CalculateFuelVolumeForFlight(System.Double,System.Double,System.Double)": {
+          "Lines": {
+            "46": 1,
+            "47": 1,
+            "48": 1
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessmentBusiness.Services.FlightService::CalculateTimeOfFlight(System.Double,System.Double)": {
+          "Lines": {
+            "57": 1,
+            "58": 1,
+            "59": 1
+          },
+          "Branches": []
+        },
+        "System.Double TUIAssessmentBusiness.Services.FlightService::HaversineFormulae(TUIAssessmentBusiness.Models.CoordinatesModel,TUIAssessmentBusiness.Models.CoordinatesModel)": {
+          "Lines": {
             "64": 6,
             "65": 6,
-            "67": 6,
-            "69": 6,
-            "70": 6
+            "66": 6,
+            "68": 6,
+            "70": 6,
+            "71": 6
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Services.FlightService::VicentyFormulae(TUIAssessmentBuisness.Models.CoordinatesModel,TUIAssessmentBuisness.Models.CoordinatesModel)": {
+        "System.Double TUIAssessmentBusiness.Services.FlightService::VicentyFormulae(TUIAssessmentBusiness.Models.CoordinatesModel,TUIAssessmentBusiness.Models.CoordinatesModel)": {
           "Lines": {
-            "73": 0,
             "74": 0,
-            "76": 0,
-            "78": 0,
-            "80": 0,
-            "82": 0,
-            "83": 0
+            "75": 0,
+            "77": 0,
+            "79": 0,
+            "81": 0,
+            "83": 0,
+            "84": 0
           },
           "Branches": []
         },
-        "System.Void TUIAssessmentBuisness.Services.FlightService::.ctor()": {
+        "System.Void TUIAssessmentBusiness.Services.FlightService::.ctor()": {
           "Lines": {
-            "8": 8,
-            "9": 8
+            "9": 8,
+            "10": 8
           },
           "Branches": []
         }
       },
-      "TUIAssessmentBuisness.Services.NumericExtensions": {
-        "System.Double TUIAssessmentBuisness.Services.NumericExtensions::ToRadians(System.Double)": {
+      "TUIAssessmentBusiness.Services.NumericExtensions": {
+        "System.Double TUIAssessmentBusiness.Services.NumericExtensions::ToRadians(System.Double)": {
           "Lines": {
-            "96": 36,
             "97": 36,
-            "98": 36
+            "98": 36,
+            "99": 36
           },
           "Branches": []
         }
       }
     },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentBuisness/Models/AirportModel.cs": {
-      "TUIAssessmentBuisness.Models.AirportModel": {
-        "System.Int32 TUIAssessmentBuisness.Models.AirportModel::get_Id()": {
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentBusiness\\Models\\AirportModel.cs": {
+      "TUIAssessmentBusiness.Models.AirportModel": {
+        "System.Int32 TUIAssessmentBusiness.Models.AirportModel::get_Id()": {
           "Lines": {
-            "5": 92
+            "5": 248
           },
           "Branches": []
         },
-        "System.String TUIAssessmentBuisness.Models.AirportModel::get_Code()": {
+        "System.String TUIAssessmentBusiness.Models.AirportModel::get_Code()": {
           "Lines": {
-            "6": 40
+            "6": 226
           },
           "Branches": []
         },
-        "System.String TUIAssessmentBuisness.Models.AirportModel::get_Name()": {
+        "System.String TUIAssessmentBusiness.Models.AirportModel::get_Name()": {
           "Lines": {
-            "7": 40
+            "7": 214
           },
           "Branches": []
         },
-        "TUIAssessmentBuisness.Models.CoordinatesModel TUIAssessmentBuisness.Models.AirportModel::get_Coordinates()": {
+        "TUIAssessmentBusiness.Models.CoordinatesModel TUIAssessmentBusiness.Models.AirportModel::get_Coordinates()": {
           "Lines": {
-            "8": 50
+            "8": 218
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Models.AirportModel::get_TakeOffEffort()": {
+        "System.Double TUIAssessmentBusiness.Models.AirportModel::get_TakeOffEffort()": {
           "Lines": {
-            "9": 45
+            "9": 53
           },
           "Branches": []
         }
       }
     },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentBuisness/Models/CoordinatesModel.cs": {
-      "TUIAssessmentBuisness.Models.CoordinatesModel": {
-        "System.Double TUIAssessmentBuisness.Models.CoordinatesModel::get_Latitude()": {
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentBusiness\\Models\\CoordinatesModel.cs": {
+      "TUIAssessmentBusiness.Models.CoordinatesModel": {
+        "System.Double TUIAssessmentBusiness.Models.CoordinatesModel::get_Latitude()": {
           "Lines": {
-            "5": 76
+            "5": 244
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Models.CoordinatesModel::get_Longitude()": {
+        "System.Double TUIAssessmentBusiness.Models.CoordinatesModel::get_Longitude()": {
           "Lines": {
-            "6": 64
+            "6": 232
           },
           "Branches": []
         },
-        "System.Void TUIAssessmentBuisness.Models.CoordinatesModel::.ctor(System.Double,System.Double)": {
+        "System.Void TUIAssessmentBusiness.Models.CoordinatesModel::.ctor(System.Double,System.Double)": {
           "Lines": {
-            "8": 52,
-            "9": 52,
-            "10": 52,
-            "11": 52,
-            "12": 52
+            "8": 220,
+            "9": 220,
+            "10": 220,
+            "11": 220,
+            "12": 220
           },
           "Branches": []
         }
       }
     },
-    "/Volumes/HHD-Data/Development/DotNetWorkspace/TUIAssessment/TUIAssessmentBuisness/Models/FlightModel.cs": {
-      "TUIAssessmentBuisness.Models.FlightModel": {
-        "System.Int32 TUIAssessmentBuisness.Models.FlightModel::get_ID()": {
+    "C:\\Users\\achollet\\Documents\\PersonnalWorkspace\\DotNetCore\\TUIAssessment\\TUIAssessmentBusiness\\Models\\FlightModel.cs": {
+      "TUIAssessmentBusiness.Models.FlightModel": {
+        "System.Int32 TUIAssessmentBusiness.Models.FlightModel::get_ID()": {
           "Lines": {
-            "7": 94
+            "7": 112
           },
           "Branches": []
         },
-        "TUIAssessmentBuisness.Models.AirportModel TUIAssessmentBuisness.Models.FlightModel::get_DepartureAirport()": {
+        "TUIAssessmentBusiness.Models.AirportModel TUIAssessmentBusiness.Models.FlightModel::get_DepartureAirport()": {
           "Lines": {
-            "8": 88
+            "8": 100
           },
           "Branches": []
         },
-        "TUIAssessmentBuisness.Models.AirportModel TUIAssessmentBuisness.Models.FlightModel::get_ArrivalAirport()": {
+        "TUIAssessmentBusiness.Models.AirportModel TUIAssessmentBusiness.Models.FlightModel::get_ArrivalAirport()": {
           "Lines": {
-            "9": 88
+            "9": 100
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Models.FlightModel::get_Distance()": {
+        "System.Double TUIAssessmentBusiness.Models.FlightModel::get_Distance()": {
           "Lines": {
-            "10": 90
+            "10": 102
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Models.FlightModel::get_Carburant()": {
+        "System.Double TUIAssessmentBusiness.Models.FlightModel::get_Carburant()": {
           "Lines": {
-            "11": 78
+            "11": 90
           },
           "Branches": []
         },
-        "System.Double TUIAssessmentBuisness.Models.FlightModel::get_Duration()": {
+        "System.Double TUIAssessmentBusiness.Models.FlightModel::get_Duration()": {
           "Lines": {
-            "12": 78
+            "12": 90
           },
           "Branches": []
         },
-        "System.DateTime TUIAssessmentBuisness.Models.FlightModel::get_Creation()": {
+        "System.DateTime TUIAssessmentBusiness.Models.FlightModel::get_Creation()": {
           "Lines": {
-            "13": 17
+            "13": 11
           },
           "Branches": []
         },
-        "System.DateTime TUIAssessmentBuisness.Models.FlightModel::get_Update()": {
+        "System.DateTime TUIAssessmentBusiness.Models.FlightModel::get_Update()": {
           "Lines": {
-            "14": 6
+            "14": 1
           },
           "Branches": []
         }
