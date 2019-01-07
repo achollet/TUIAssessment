@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TUIAssessment.Web.Models;
 using TUIAssessmentBusiness.Interfaces;
 
-namespace TUIAssessment.Web.Controllers
+namespace TUIAssessmentWeb.Controllers
 {
     [Route("api/v1/[controller]")]
     public class FlightsReportController : Controller

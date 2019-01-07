@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using TUIAssessment.Web.Models;
 
-namespace TUIAssessment.Web.Controllers
+namespace TUIAssessmentWeb.Controllers
 {
     public interface IAirportViewModelBuilder
     {

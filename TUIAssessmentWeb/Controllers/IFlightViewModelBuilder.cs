@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TUIAssessment.Web.Models;
 using TUIAssessmentBusiness.Models;
 
-namespace TUIAssessment.Web.Controllers
+namespace TUIAssessmentWeb.Controllers
 {
     public interface IFlightViewModelBuilder
     {

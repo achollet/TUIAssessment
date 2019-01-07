@@ -2,7 +2,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using TUIAssessmentBusiness.Interfaces;
 
-namespace TUIAssessment.Web.Controllers
+namespace TUIAssessmentWeb.Controllers
 {
     [Route("api/v1/[controller]")]
     public class FlightCreatorController : Controller
